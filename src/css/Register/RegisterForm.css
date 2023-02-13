@@ -1,0 +1,21 @@
+.signUp {
+  color: var(--primary-color);
+}
+button[type="submit"] {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+button[type="submit"]:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+.forgot_passowrd,
+.sign_up_link {
+  color: var(--primary-color);
+}
