@@ -38,7 +38,7 @@ function Header() {
         <div className="content container mx-auto px-4 flex justify-between py-2 w-full  text-white">
           <div className="phone_number flex gap-2 justify-center items-center">
             <BsTelephone />
-            <p>+87398950983</p>
+            <p>+873980983</p>
           </div>
           <p className="ads hidden md:block">
             Get 50% off on Selected Items | <a href="#">Shop Now</a>
@@ -71,6 +71,7 @@ function Header() {
           className="text-2xl hover:cursor-pointer lg:hidden hover:scale-75"
           onClick={handleMobileNav}
         />
+        {/* logo */}
         <a
           href="#"
           className="logo flex items-center gap-1 text-xl font-extrabold"
