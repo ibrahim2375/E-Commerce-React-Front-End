@@ -4,7 +4,7 @@ import React from "react";
 import "../../css/Home/Advertisement.css";
 function Advertisement() {
   return (
-    <div className="ad px-10 py-10 flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 w-full">
+    <div className="ad my-5 px-10  py-10 flex flex-col md:flex-row items-center justify-center md:justify-between gap-10 w-full">
       <div className="ad_info flex flex-col gap-4 justify-center">
         <h1 className="text-3xl font-extrabold">Get 5% Cash Back</h1>
         <p>on Shopcart.com</p>
