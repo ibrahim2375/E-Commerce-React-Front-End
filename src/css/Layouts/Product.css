@@ -1,0 +1,22 @@
+.product_image {
+  background-color: var(--product-bg);
+  width: 250px;
+  height: 250px;
+}
+.filled_star {
+  color: var(--stars-color);
+}
+
+.add_to_cart {
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.add_to_cart:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}

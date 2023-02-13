@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Raleway:wght@300;400;600&display=swap");
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ========== Basic Colors =================== */
+  --primary-color: #013d29;
+  --secondary-color: #fff;
+  --banner-bg: #f4f5f9;
+  --product-bg: #f6f6f6;
+  --brand-bg: #f6f6f6;
+  --service-bg: #f6f6f6;
+  --ads-bg: #fcf0e4;
+  --stars-color: #28a028;
+  --error-color: #a02828;
+  --input-bg: #edf2f7;
+  /* ========== Random Colors For Offers ============ */
+  --offer1-color: #f6f2d4;
+  --offer2-color: #f8dcdd;
+  --offer3-color: #f2e4d8;
+  --offer4-color: #d3f7ed;
+  /* ========== Fonts ============  */
+  --first-font: "Pacifico", cursive;
+  --second-font: "Raleway", sans-serif;
+}
+
+/* inialization */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+html::-webkit-scrollbar {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--second-font);
+}
+/* general classes */
+.row::-webkit-scrollbar {
+  display: none;
+}

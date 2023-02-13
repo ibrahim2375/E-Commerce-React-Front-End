@@ -1,0 +1,28 @@
+.banner {
+  background-color: var(--banner-bg);
+}
+.title,
+.description {
+  color: var(--primary-color);
+}
+.more_info_btn {
+  background-color: var(--primary-color);
+}
+
+.banner_img {
+  max-height: 60vh;
+}
+.more_info_btn {
+  color: var(--secondary-color);
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.more_info_btn:hover {
+  outline: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: transparent;
+  box-shadow: none;
+}

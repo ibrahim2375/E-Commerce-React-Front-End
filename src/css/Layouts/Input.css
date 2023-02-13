@@ -1,0 +1,14 @@
+.custom_input {
+  /* border-bottom: 1px solid var(--primary-color); */
+  background-color: var(--input-bg);
+}
+.error_message {
+  display: none;
+  color: var(--error-color);
+}
+.custom_input:invalid[focus="true"] {
+  border-bottom: 1px solid var(--error-color);
+}
+.custom_input:invalid[focus="true"] ~ .error_message {
+  display: block;
+}

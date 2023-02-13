@@ -1,0 +1,7 @@
+.brand {
+  cursor: pointer;
+  background: var(--brand-bg);
+}
+.brand:hover {
+  outline: 1px solid var(--primary-color);
+}
