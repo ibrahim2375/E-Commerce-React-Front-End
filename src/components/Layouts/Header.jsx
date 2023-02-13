@@ -84,7 +84,7 @@ function Header() {
             <Select list={categories} title={"Categories"} />
           </li>
           {pages.map((page) => (
-            <li className="" key={page.id}>
+            <li className="links" key={page.id}>
               <Link to={page.path}>{page.page}</Link>
             </li>
           ))}

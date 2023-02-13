@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
 //components
-// import Select from "./Select";
+import Select from "./Select";
 //css
 import "../../css/Layouts/MobileNav.css";
 //icons
@@ -29,10 +29,7 @@ function MobileNav({ mobileNavState, handleMobileNav }) {
       } lg:hidden w-full top-0 left-0 bottom-0  z-50 bg-white transition ease-in-out delay-150 duration-300 shadow-md`}
     >
       {/* content */}
-      <div
-        className="content divide-x-1 divide-solid divide-slate-400/25 "
-        onClick={handleMobileNav}
-      >
+      <div className="content divide-x-1 divide-solid divide-slate-400/25 ">
         {/* user */}
         <div className="user_data py-4 px-2 flex justify-center items-center gap-2 text-white">
           <FaUserCircle />
@@ -47,9 +44,12 @@ function MobileNav({ mobileNavState, handleMobileNav }) {
         <div className="pages px-3 pb-4">
           <h1 className="text-md font-bold my-4">All Pages</h1>
           <ul className="links flex flex-col justify-center items-start gap-4">
-            <li className="hover:cursor-pointer">Categories</li>
+            {/* custom select  */}
+            <li>
+              <Select list={categories} title="Categories" />
+            </li>
             {pages.map((page) => (
-              <li className="" key={page.id}>
+              <li className="links" key={page.id} onClick={handleMobileNav}>
                 <Link to={page.path}>{page.page}</Link>
               </li>
             ))}
@@ -58,7 +58,11 @@ function MobileNav({ mobileNavState, handleMobileNav }) {
         {/* Help & Settings */}
         <div className="help px-3 pb-4">
           <h1 className="text-md font-bold my-4">Help & Settings</h1>
-          <Link to="/login" className="flex justify-start items-center gap-2">
+          <Link
+            to="/login"
+            className="flex justify-start items-center gap-2"
+            onClick={handleMobileNav}
+          >
             <AiOutlineUser className="text-xl" />
             Sign In
           </Link>
