@@ -8,7 +8,7 @@ import Brands from "../components/Home/Brands";
 import OffersRow from "../components/Home/OffersRow";
 import BigOffer from "../components/Home/BigOffer";
 import ProductsSections from "../components/Home/ProductsSections";
-import Advertisement from "../components/Home/Advertisement";
+import Advertisement from "../components/Layouts/Advertisement";
 import Services from "../components/Home/Services";
 function Home() {
   const [categories, setCategories] = useState([
