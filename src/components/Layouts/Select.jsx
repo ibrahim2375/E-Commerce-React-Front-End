@@ -28,7 +28,7 @@ function Select({ list, title }) {
       <ul
         className={`options  ${
           selectState ? "flex" : "hidden"
-        } flex-col gap-2  py-5 rounded-md`}
+        } flex-col gap-2  py-5 rounded-md shadow-md`}
       >
         {list.map((l, i) => (
           <motion.li

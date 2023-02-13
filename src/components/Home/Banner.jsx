@@ -42,19 +42,19 @@ function Banner() {
             Learn More
           </button>
         </motion.div>
-        <motion.div
-          initial={{ rotateZ: 0 }}
-          animate={{ rotateZ: "360deg" }}
-          transition={{
-            ease: "easeIn",
-            duration: 5,
-            type: "spring",
-            // stiffness: 50,
-          }}
-          className="right_side"
+        <div
+          // initial={{ rotateZ: 0 }}
+          // animate={{ rotateZ: "360deg" }}
+          // transition={{
+          //   ease: "easeIn",
+          //   duration: 5,
+          //   type: "spring",
+          //   // stiffness: 50,
+          // }}
+          className="right_side origin-center  self-center"
         >
           <img src={BannerImg} alt="banner" className="banner_img" />
-        </motion.div>
+        </div>
       </div>
     </div>
   );

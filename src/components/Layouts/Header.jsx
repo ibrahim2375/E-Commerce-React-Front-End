@@ -44,24 +44,23 @@ function Header() {
             Get 50% off on Selected Items | <a href="#">Shop Now</a>
           </p>
           <div className="site_info flex gap-4">
-              <select
-                className="language block w-full     py-1 px-1  rounded leading-tight"
-                id="grid-state"
-              >
-                <option value="English">English</option>
-                <option value="Arabic">Arabic</option>
-                <option value="Arabic">French</option>
-              </select>
-    
-              <select
-                className="location block w-full     py-1 px-1  rounded leading-tight"
-                id="grid-state"
-              >
-                <option value="eg">EG</option>
-                <option value="usa">USA</option>
-                <option value="usa">UAE</option>
-              </select>
-      
+            <select
+              className="language block w-full   py-1   rounded leading-tight"
+              id="grid-state"
+            >
+              <option value="English">English</option>
+              <option value="Arabic">Arabic</option>
+              <option value="Arabic">French</option>
+            </select>
+
+            <select
+              className="location block w-full   py-1 px-1  rounded leading-tight"
+              id="grid-state"
+            >
+              <option value="eg">EG</option>
+              <option value="usa">USA</option>
+              <option value="usa">UAE</option>
+            </select>
           </div>
         </div>
       </nav>

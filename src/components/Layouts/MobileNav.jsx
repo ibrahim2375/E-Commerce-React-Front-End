@@ -1,28 +1,45 @@
+import React, { useState } from "react";
 //icons
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
-import React from "react";
 //components
-import Select from "./Select";
+// import Select from "./Select";
 //css
 import "../../css/Layouts/MobileNav.css";
 //icons
 import { CgClose } from "react-icons/cg";
+import { Link } from "react-router-dom";
 function MobileNav({ mobileNavState, handleMobileNav }) {
+  const [categories, setCategories] = useState([
+    { id: 0, category: "Travel" },
+    { id: 1, category: "Art" },
+    { id: 2, category: "Shoes" },
+    { id: 3, category: "Books" },
+  ]);
+  const [pages, setPages] = useState([
+    { id: 0, page: "Home", path: "/" },
+    { id: 1, page: "Products", path: "/products" },
+    { id: 2, page: "Contact", path: "/contact" },
+  ]);
+
   return (
     <nav
       className={`mobile_nav_side ${
         mobileNavState ? "fixed" : "hidden"
-      } lg:hidden w-full top-0 left-0 bottom-0 z-50 bg-white transition ease-in-out delay-150 duration-300 `}
+      } lg:hidden w-full top-0 left-0 bottom-0  z-50 bg-white transition ease-in-out delay-150 duration-300 shadow-md`}
     >
-      <div className="content divide-x-1 divide-solid divide-slate-400/25 ">
+      {/* content */}
+      <div
+        className="content divide-x-1 divide-solid divide-slate-400/25 "
+        onClick={handleMobileNav}
+      >
         {/* user */}
         <div className="user_data py-4 px-2 flex justify-center items-center gap-2 text-white">
           <FaUserCircle />
           <h1>Hello , User</h1>
           {/* close icon */}
           <CgClose
-            className="text-2xl text-white absolute top-4 left-3 hover:cursor-pointer"
+            className="text-2xl text-white absolute top-4 left-3 hover:cursor-pointer hover:scale-75"
             onClick={handleMobileNav}
           />
         </div>
@@ -31,19 +48,20 @@ function MobileNav({ mobileNavState, handleMobileNav }) {
           <h1 className="text-md font-bold my-4">All Pages</h1>
           <ul className="links flex flex-col justify-center items-start gap-4">
             <li className="hover:cursor-pointer">Categories</li>
-            <li className="hover:cursor-pointer">Home</li>
-            <li className="hover:cursor-pointer">Products</li>
-            <li className="hover:cursor-pointer">Blog</li>
-            <li className="hover:cursor-pointer">Contact</li>
+            {pages.map((page) => (
+              <li className="" key={page.id}>
+                <Link to={page.path}>{page.page}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         {/* Help & Settings */}
         <div className="help px-3 pb-4">
           <h1 className="text-md font-bold my-4">Help & Settings</h1>
-          <button className="flex justify-center items-center gap-2">
+          <Link to="/login" className="flex justify-start items-center gap-2">
             <AiOutlineUser className="text-xl" />
             Sign In
-          </button>
+          </Link>
         </div>
       </div>
     </nav>

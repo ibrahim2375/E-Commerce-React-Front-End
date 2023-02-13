@@ -19,7 +19,8 @@ function RegisterForm() {
       name: "username",
       type: "text",
       placeholder: "Username",
-      errorMessage: "Username is Required.",
+      errorMessage: "Username Must Be At least 6 Char.",
+      pattern: "[A-Za-z0-9-_.]{6,20}",
     },
     {
       id: 1,
@@ -42,7 +43,7 @@ function RegisterForm() {
       type: "text",
       placeholder: "Number",
       errorMessage: "Enter Correct Number",
-      // pattern: "",
+      pattern: "^(0|[1-9][0-9]*){11,}$",
     },
     {
       id: 5,
