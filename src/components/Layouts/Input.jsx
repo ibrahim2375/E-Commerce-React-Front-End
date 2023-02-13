@@ -21,9 +21,12 @@ function Input(props) {
         pattern={pattern}
         required
         onBlur={handleFoucs}
+        onFocus={() => name === "confirmPassword" && handleFoucs}
         focus={isFoucs.toString()}
       />
-      <div className="error_message text-xs w-fullvar(--error-color);">{errorMessage}</div>
+      <div className="error_message text-xs w-fullvar(--error-color);">
+        {errorMessage}
+      </div>
     </div>
   );
 }

@@ -38,7 +38,7 @@ function LoginForm() {
     console.table(values);
   };
   return (
-    <div className="form grid place-items-center my-40">
+    <div className="form grid place-items-center my-20">
       <form
         onSubmit={onSubmit}
         className="py-14 px-10 shadow-none sm:shadow-lg rounded-md"
