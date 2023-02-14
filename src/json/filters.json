@@ -1,0 +1,44 @@
+{
+  "colors": [
+    { "id": 0, "data": "green" },
+    { "id": 1, "data": "yellow" },
+    { "id": 2, "data": "blue" },
+    { "id": 3, "data": "gray" },
+    { "id": 4, "data": "red" },
+    { "id": 5, "data": "white" },
+    { "id": 6, "data": "black" }
+  ],
+  "sizes": [
+    { "id": 0, "data": "sm" },
+    { "id": 1, "data": "md" },
+    { "id": 2, "data": "lg" },
+    { "id": 3, "data": "xl" },
+    { "id": 4, "data": "xxl" },
+    { "id": 5, "data": "xxxl" }
+  ],
+  "offers": [
+    { "id": 0, "data": "5%" },
+    { "id": 1, "data": "10%" },
+    { "id": 2, "data": "15%" },
+    { "id": 3, "data": "20%" },
+    { "id": 4, "data": "25%" },
+    { "id": 5, "data": "30%" },
+    { "id": 6, "data": "50%" }
+  ],
+  "price": [
+    { "id": 0, "data": "asc" },
+    { "id": 1, "data": "dec" }
+  ],
+  "SortBy": [
+    { "id": 0, "data": "asc" },
+    { "id": 1, "data": "dec" }
+  ],
+  "Type": [
+    { "id": 0, "data": "sm" },
+    { "id": 1, "data": "md" },
+    { "id": 2, "data": "lg" },
+    { "id": 3, "data": "xl" },
+    { "id": 4, "data": "xxl" },
+    { "id": 5, "data": "xxxl" }
+  ]
+}

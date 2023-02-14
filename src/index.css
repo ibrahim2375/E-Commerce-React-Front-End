@@ -39,15 +39,15 @@
 html::-webkit-scrollbar {
   scroll-behavior: smooth;
   width: 10px;
-  /* background-color: transparent; */
+  background-color: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color);
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background-color: #dfdfdf;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 body {
   font-family: var(--second-font);
