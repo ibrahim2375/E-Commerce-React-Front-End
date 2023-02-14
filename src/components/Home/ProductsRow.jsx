@@ -31,6 +31,7 @@ function ProductsRow({ title, url }) {
             img={product?.img}
             name={product?.name}
             price={product?.price}
+            quantity={product?.quantity}
           />
         ))}
       </div>

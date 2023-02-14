@@ -49,6 +49,7 @@ function ProductsSections({ categories }) {
             img={product?.img}
             name={product?.name}
             price={product?.price}
+            quantity={product?.quantity}
           />
         ))}
       </div>

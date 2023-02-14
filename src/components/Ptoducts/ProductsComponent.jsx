@@ -11,7 +11,7 @@ function ProductsComponent({ products }) {
   const [pageNumber, setPageNumber] = useState(0);
   const productsPerPages = 20;
   const productsVisited = pageNumber * productsPerPages;
-  const pageCount = Math.ceil(products?.length / productsPerPages);
+  let pageCount = Math.ceil(products?.length / productsPerPages);
   const currentProducts = products?.slice(
     productsVisited,
     productsVisited + productsPerPages
@@ -30,6 +30,7 @@ function ProductsComponent({ products }) {
             img={product?.img}
             name={product?.name}
             price={product?.price}
+            quantity={product?.quantity}
           />
         ))}
       </div>
@@ -42,7 +43,7 @@ function ProductsComponent({ products }) {
           onPageChange={handlePageClick}
           pageRangeDisplayed={3}
           marginPagesDisplayed={1}
-          pageCount={pageCount}
+          pageCount={parseInt(pageCount)}
           renderOnZeroPageCount={null}
           containerClassName="pagination_container"
           previousLinkClassName="pagination_prev"

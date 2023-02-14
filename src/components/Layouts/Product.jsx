@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 //icons
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiTwotoneHeart } from "react-icons/ai";
@@ -8,7 +8,11 @@ import { AiOutlineStar } from "react-icons/ai";
 import { truncate } from "../../functions/Truncate";
 //css
 import "../../css/Layouts/Product.css";
-function Product({ img, name, price }) {
+function Product({ img, name, price, quantity }) {
+  //handle add items to cart
+  const handleAddToCart = (img, name, price, quantity) => {
+    console.table(img, name, price, quantity);
+  };
   return (
     <div className="product">
       <div className="product_image relative  rounded-md mb-2 grid place-content-center">
@@ -37,7 +41,10 @@ function Product({ img, name, price }) {
           ))}
           <p>(121)</p>
         </div>
-        <button className="add_to_cart mt-4 text-sm py-2 px-4 outline outline-1 rounded-full outline-green-900">
+        <button
+          onClick={() => handleAddToCart(img, name, price, quantity)}
+          className="add_to_cart mt-4 text-sm py-2 px-4 outline outline-1 rounded-full outline-green-900"
+        >
           Add To Cart
         </button>
       </div>
