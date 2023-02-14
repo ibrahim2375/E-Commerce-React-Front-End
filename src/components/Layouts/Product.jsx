@@ -6,12 +6,18 @@ import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 //functions
 import { truncate } from "../../functions/Truncate";
+//redux
+import { useDispatch, useSelector } from "react-redux";
+import * as Actions from "../../redux/reducers";
 //css
 import "../../css/Layouts/Product.css";
-function Product({ img, name, price, quantity }) {
+function Product({ id, img, name, price, quantity }) {
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
   //handle add items to cart
-  const handleAddToCart = (img, name, price, quantity) => {
-    console.table(img, name, price, quantity);
+  const handleAddToCart = async (id, img, name, price, quantity) => {
+    await dispatch(Actions.addToCart({ id, img, name, price, quantity }));
+    console.log(cart);
   };
   return (
     <div className="product">
@@ -42,7 +48,7 @@ function Product({ img, name, price, quantity }) {
           <p>(121)</p>
         </div>
         <button
-          onClick={() => handleAddToCart(img, name, price, quantity)}
+          onClick={() => handleAddToCart(id, img, name, price, quantity)}
           className="add_to_cart mt-4 text-sm py-2 px-4 outline outline-1 rounded-full outline-green-900"
         >
           Add To Cart

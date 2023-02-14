@@ -28,6 +28,7 @@ function ProductsRow({ title, url }) {
         {data?.map((product) => (
           <Product
             key={product?.id}
+            id={product?.id}
             img={product?.img}
             name={product?.name}
             price={product?.price}
