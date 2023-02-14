@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
-//api request
-import axios from "../../api/axios";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
 //components
 import Button from "../Layouts/Button";
 import Product from "../Layouts/Product";
@@ -11,22 +11,16 @@ let scrollLeft = 0;
 let startX;
 let isDown = false;
 function ProductsSections({ categories }) {
-  const [bestProducts, setBestProducts] = useState([]);
   const [currentQuery, setCurrentQuery] = useState(categories[0]?.category);
   const categories_ref = useRef();
+  //shoud be limited data depnd on category
+  const { data, loading, error } = UseFetch(
+    `/products?category=${currentQuery}`
+  );
   //handle select when select btn add his category
   const handleSelect = (value) => {
     setCurrentQuery(value);
   };
-  //get best products in home page
-  useEffect(() => {
-    const getBeastProducts = async () => {
-      await axios.get(`/products?category=${currentQuery}`).then((response) => {
-        setBestProducts(response?.data);
-      });
-    };
-    getBeastProducts();
-  }, [currentQuery]);
   //handle scrolling
   useEffect(() => {
     ScrollByMouse(categories_ref, startX, scrollLeft, isDown);
@@ -49,7 +43,7 @@ function ProductsSections({ categories }) {
       </div>
       {/* products */}
       <div className="products flex flex-wrap justify-center  gap-10 py-10 px-5 ">
-        {bestProducts.map((product) => (
+        {data?.map((product) => (
           <Product
             key={product?.id}
             img={product?.img}

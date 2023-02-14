@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-//pi request
-import axios from "../../api/axios";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
 //components
@@ -11,18 +11,9 @@ let startX;
 let isDown = false;
 //css
 import "../../css/Home/ProductsRow.css";
-function ProductsRow({title}) {
-  const [products, setProducts] = useState([]);
+function ProductsRow({ title, url }) {
   const product_row = useRef();
-
-  useEffect(() => {
-    const getProducts = async () => {
-      await axios
-        .get("/products")
-        .then((response) => setProducts(response.data));
-    };
-    getProducts();
-  }, []);
+  const { data, loading, error } = UseFetch(url);
   //handle scrolling
   useEffect(() => {
     ScrollByMouse(product_row, startX, scrollLeft, isDown);
@@ -34,7 +25,7 @@ function ProductsRow({title}) {
         ref={product_row}
         className="row py-4 px-2 content flex items-center gap-5 overflow-x-auto cursor-pointer"
       >
-        {products?.map((product) => (
+        {data?.map((product) => (
           <Product
             key={product?.id}
             img={product?.img}

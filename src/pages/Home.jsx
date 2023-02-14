@@ -34,16 +34,16 @@ function Home() {
       <Banner />
       <div className="container mx-auto px-4">
         <TopCategories />
-        <ProductsRow title={"Todays Best Deals For You."} />
+        <ProductsRow title={"Todays Best Deals For You."} url="/products" />
         <Brands />
         <OffersRow />
-        <ProductsRow title={"Weekly Popular Products."} />
+        <ProductsRow title={"Weekly Popular Products."} url="/products" />
       </div>
       <BigOffer />
       <div className="container mx-auto px-4">
         <ProductsSections categories={categories} />
         <Advertisement />
-        <ProductsRow title={"Most Selling Products."} />
+        <ProductsRow title={"Most Selling Products."} url="/products" />
         <Services />
       </div>
     </div>

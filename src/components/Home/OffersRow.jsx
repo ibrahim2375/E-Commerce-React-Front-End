@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-//api request
-import axios from "../../api/axios";
+import React, { useEffect, useRef } from "react";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
 //css
@@ -11,14 +11,8 @@ let startX;
 let isDown = false;
 
 function OffersRow() {
-  const [offers, setOffers] = useState([]);
   const offers_row = useRef();
-  useEffect(() => {
-    const getOffers = async () => {
-      await axios.get("/offers").then((response) => setOffers(response.data));
-    };
-    getOffers();
-  });
+  const { data, loading, error } = UseFetch("/offers");
   //handle scrolling
   useEffect(() => {
     ScrollByMouse(offers_row, startX, scrollLeft, isDown);
@@ -31,7 +25,7 @@ function OffersRow() {
         className="row content flex items-center gap-5 overflow-x-auto py-4 px-10"
       >
         {/* offer box */}
-        {offers.map((offer) => (
+        {data?.map((offer) => (
           <div
             key={offer?.id}
             className="offer  grid grid-rows-2  gap-4 rounded-lg cursor-pointer shadow-md"

@@ -1,6 +1,6 @@
-import React, { useEffect, useState, useRef } from "react";
-//request api
-import axios from "../../api/axios";
+import React, { useEffect, useRef } from "react";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
 //css
@@ -11,18 +11,9 @@ let startX;
 let isDown = false;
 
 function TopCategories() {
-  const [categories, setCategories] = useState([]);
   const top_categories_slide = useRef();
-  //handle mouse over scroll
+  const { data, loading, error } = UseFetch("categories");
 
-  useEffect(() => {
-    const getCategories = async () => {
-      await axios
-        .get("/categories")
-        .then((response) => setCategories(response.data));
-    };
-    getCategories();
-  }, []);
   //handle scrolling
   useEffect(() => {
     ScrollByMouse(top_categories_slide, startX, scrollLeft, isDown);
@@ -34,7 +25,7 @@ function TopCategories() {
         ref={top_categories_slide}
         className="row categories overflow-x-auto   flex  items-center gap-6 py-5 cursor-pointer"
       >
-        {categories.map((category) => (
+        {data?.map((category) => (
           <div
             className={`category text-center rounded-lg shadow-md `}
             style={{ backgroundColor: category.bg_color }}
