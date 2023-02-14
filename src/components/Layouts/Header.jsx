@@ -11,10 +11,14 @@ import { FcShop } from "react-icons/fc";
 import Search from "./Search";
 import MobileNav from "./MobileNav";
 import Select from "./Select";
+//redux fetch data from store
+import { useSelector } from "react-redux";
 //css
 import "../../css/Layouts/Header.css";
 import { Link } from "react-router-dom";
 function Header() {
+  //get cart length to disply in budget
+  const cartLenght = useSelector((state) => state.cart?.length);
   const [mobileNavState, setMobileNavState] = useState(false);
   const [categories, setCategories] = useState([
     { id: 0, category: "Travel" },
@@ -74,7 +78,7 @@ function Header() {
         {/* logo */}
         <a
           href="#"
-          className="logo flex items-center gap-1 text-xl font-extrabold"
+          className="logo flex items-center gap-1 text-2xl font-extrabold"
         >
           <FcShop />
           <h1 className="logo_text hidden sm:flex">ShopCart</h1>
@@ -90,21 +94,22 @@ function Header() {
             </li>
           ))}
         </ul>
+        {/* search input */}
         <Search />
+        {/* login and sugup pages */}
         <div className="account_data flex justify-center items-center gap-4">
           <Link
             to="/login"
             className="hidden lg:flex justify-center items-center gap-2"
           >
-            <AiOutlineUser className="text-xl" />
+            <AiOutlineUser className="text-2xl" />
             Account
           </Link>
+          {/* cart icon */}
           <Link to="/cart" className="flex justify-center items-center gap-2">
             <div className="cart_icon relative">
-              <div className="budget">
-                <p className="text-md">3</p>
-              </div>
-              <AiOutlineShoppingCart className="text-xl" />
+              <p className="budget">{cartLenght}</p>
+              <AiOutlineShoppingCart className="text-2xl" />
             </div>
             Cart
           </Link>
