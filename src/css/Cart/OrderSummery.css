@@ -1,0 +1,25 @@
+.coupon_input {
+  background-color: var(--input-bg);
+  height: 35px;
+  padding-left: 10px;
+}
+.coupon_btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px 15px;
+}
+.checkout {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 5px 15px;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+}
+.checkout:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+/* mobile */
