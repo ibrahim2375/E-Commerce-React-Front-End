@@ -5,10 +5,15 @@
   cursor: pointer;
 }
 .custom_select .options {
+  display: none;
   position: absolute;
-  top: 50px;
+  top: 20px;
   background-color: var(--secondary-color);
 }
+.custom_select:hover > .options {
+  display: flex;
+}
+
 .custom_select .options .option {
   cursor: pointer;
 }

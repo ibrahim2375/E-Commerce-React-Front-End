@@ -33,7 +33,7 @@ function Product({ id, img, name, price, quantity }) {
       <div className="product_info ">
         <div className="head flex items-center justify-between mt-2">
           <h2 className="name font-bold text-lg">{name}</h2>
-          <h2 className="price font-bold text-lg">{price}</h2>
+          <h2 className="price font-bold text-lg">{price}$</h2>
         </div>
         <p className="description text-sm text-slate-400">
           {truncate(

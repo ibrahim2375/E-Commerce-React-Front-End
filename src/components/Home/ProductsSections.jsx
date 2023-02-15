@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useSelector } from "react-redux";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
 //hook
@@ -10,8 +11,9 @@ import Product from "../Layouts/Product";
 let scrollLeft = 0;
 let startX;
 let isDown = false;
-function ProductsSections({ categories }) {
-  const [currentQuery, setCurrentQuery] = useState(categories[0]?.category);
+function ProductsSections() {
+  const categories = useSelector((state) => state.categories);
+  const [currentQuery, setCurrentQuery] = useState("Furniture");
   const categories_ref = useRef();
   //shoud be limited data depnd on category
   const { data, loading, error } = UseFetch(

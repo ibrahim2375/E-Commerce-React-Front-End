@@ -15,6 +15,9 @@ export const counterSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
+        addCategories: (state, action) => {
+            state.categories = action.payload;
+        },
         addToCart: (state, action) => {
             const filterCart = state.cart.filter(item => item?.id === action.payload?.id);
             if (filterCart.length === 0) {
@@ -33,6 +36,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { updateCart, removeItemFromCart, addToCart } = counterSlice.actions
+export const { addCategories,updateCart, removeItemFromCart, addToCart } = counterSlice.actions
 
 export default counterSlice.reducer

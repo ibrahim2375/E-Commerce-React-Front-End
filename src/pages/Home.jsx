@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 //components
 import Banner from "../components/Home/Banner";
@@ -10,25 +10,10 @@ import BigOffer from "../components/Home/BigOffer";
 import ProductsSections from "../components/Home/ProductsSections";
 import Advertisement from "../components/Layouts/Advertisement";
 import Services from "../components/Home/Services";
+
+//hook
+import UseFetch from "../Hooks/UseFetch";
 function Home() {
-  const [categories, setCategories] = useState([
-    {
-      id: 0,
-      category: "travel",
-    },
-    {
-      id: 1,
-      category: "technologies",
-    },
-    {
-      id: 2,
-      category: "headPhone",
-    },
-    {
-      id: 3,
-      category: "watches",
-    },
-  ]);
   return (
     <div>
       <Banner />
@@ -41,7 +26,7 @@ function Home() {
       </div>
       <BigOffer />
       <div className="container mx-auto px-4">
-        <ProductsSections categories={categories} />
+        <ProductsSections  />
         <Advertisement />
         <ProductsRow title={"Most Selling Products."} url="/products" />
         <Services />

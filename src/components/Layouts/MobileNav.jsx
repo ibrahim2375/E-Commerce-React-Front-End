@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+//redux
+import { useSelector } from "react-redux";
+
 //icons
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
@@ -10,12 +13,7 @@ import "../../css/Layouts/MobileNav.css";
 import { CgClose } from "react-icons/cg";
 import { Link } from "react-router-dom";
 function MobileNav({ mobileNavState, handleMobileNav }) {
-  const [categories, setCategories] = useState([
-    { id: 0, category: "Travel" },
-    { id: 1, category: "Art" },
-    { id: 2, category: "Shoes" },
-    { id: 3, category: "Books" },
-  ]);
+  const categories = useSelector((state) => state.categories);
   const [pages, setPages] = useState([
     { id: 0, page: "Home", path: "/" },
     { id: 1, page: "Products", path: "/products" },

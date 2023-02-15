@@ -1,4 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
+//redux
+import { useSelector } from "react-redux";
 //json data
 import Filters from "../../json/filters.json";
 //components
@@ -11,7 +13,7 @@ let startX;
 let isDown = false;
 
 function ProductsFilter() {
-  // const [filters, setFilters] = useState(null);
+    const categories = useSelector((state) => state.categories);
   const filters_row = useRef();
   //handle scrolling
   useEffect(() => {
@@ -23,7 +25,7 @@ function ProductsFilter() {
       className="filters flex gap-4 items-center row overflow-x-auto py-2 px-2 cursor-pointer"
     >
       {/* color */}
-      <FilterSelect title="Type" options={Filters.Type} />
+      <FilterSelect title="Type" options={categories} />
       <FilterSelect title="Price" options={Filters.price} />
       <FilterSelect title="Color" options={Filters.colors} />
       <FilterSelect title="Size" options={Filters.sizes} />

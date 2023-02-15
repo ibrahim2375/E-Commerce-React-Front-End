@@ -2,45 +2,51 @@
   "categories": [
     {
       "id": 0,
-      "title": "Furniture",
+      "category": "Furniture",
       "img": "categories/category-furniture.png",
       "bg_color": "#709D83"
     },
     {
       "id": 1,
-      "title": "Hand Bag",
+      "category": "HandBag",
       "img": "categories/category-hand-bag.png",
       "bg_color": "#FDB857"
     },
     {
       "id": 2,
-      "title": "Books",
+      "category": "Books",
       "img": "categories/category-books.png",
       "bg_color": "#931D1E"
     },
     {
       "id": 3,
-      "title": "Tech",
+      "category": "Tech",
       "img": "categories/category-tech.png",
       "bg_color": "#3BAD71"
     },
     {
       "id": 4,
-      "title": "Sneakers",
+      "category": "Sneakers",
       "img": "categories/category-sneakers.png",
       "bg_color": "#FEEB49"
     },
     {
       "id": 5,
-      "title": "Travel",
+      "category": "Travel",
       "img": "categories/category-travel.png",
       "bg_color": "#F6B1B6"
     },
     {
       "id": 6,
-      "title": "Art",
+      "category": "Art",
       "img": "categories/category-art.png",
       "bg_color": "#28a028"
+    },
+    {
+      "id": 7,
+      "category": "HeadPhone",
+      "img": "categories/category-hand-bag.png",
+      "bg_color": "#FDB857"
     }
   ],
   "products": [
@@ -48,238 +54,238 @@
       "id": 0,
       "name": "name",
       "img": "products/tv.png",
-      "price": "90$",
+      "price": "90",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 1,
       "name": "name",
       "img": "products/tv.png",
-      "price": "80$",
+      "price": "80",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 2,
       "name": "name",
       "img": "products/tv.png",
-      "price": "20$",
+      "price": "20",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 3,
       "name": "name",
       "img": "products/tv.png",
-      "price": "40$",
+      "price": "40",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 4,
       "name": "name",
       "img": "products/tv.png",
-      "price": "50$",
+      "price": "50",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 5,
       "name": "name",
       "img": "products/tv.png",
-      "price": "40$",
+      "price": "40",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "30",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 6,
       "name": "name",
       "img": "products/tv.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 7,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 8,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 9,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 10,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 11,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 12,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 13,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 14,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 15,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 16,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 17,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 18,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 19,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 20,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 21,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
@@ -290,100 +296,100 @@
       "id": 22,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 23,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 24,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 25,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "travel"
+      "category": "Furniture"
     },
     {
       "id": 26,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 27,
       "name": "head Phone",
       "img": "products/headPhone.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "HeadPhone"
     },
     {
       "id": 28,
       "name": "name",
       "img": "products/tv.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 29,
       "name": "name",
       "img": "products/tv.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     },
     {
       "id": 30,
       "name": "name",
       "img": "products/tv.png",
-      "price": "70$",
+      "price": "70",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "technologies"
+      "category": "Tech"
     }
   ],
   "brands": [

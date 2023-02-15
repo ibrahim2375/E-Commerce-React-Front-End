@@ -54,7 +54,7 @@ function CartComponent({ cart }) {
 
             {/* price and quantity */}
             <div className="product_info flex flex-col gap-1">
-              <h3>{data?.price}</h3>
+              <h3>{data?.quantity * data?.price}$</h3>
               <input
                 type="number"
                 defaultValue={data?.quantity}

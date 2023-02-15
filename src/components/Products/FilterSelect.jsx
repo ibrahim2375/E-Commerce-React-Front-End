@@ -9,7 +9,7 @@ function FilterSelect({ options, title }) {
         </option>
         {options?.map((op) => (
           <option key={op.id} value={op.data}>
-            {op.data}
+            {op.data || op.category}
           </option>
         ))}
       </select>

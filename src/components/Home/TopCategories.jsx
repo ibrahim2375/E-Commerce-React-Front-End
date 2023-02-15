@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
+//redux
+import { useSelector } from "react-redux";
 //css
 import "../../css/Home/TopCategories.css";
 //variables
@@ -12,7 +14,7 @@ let isDown = false;
 
 function TopCategories() {
   const top_categories_slide = useRef();
-  const { data, loading, error } = UseFetch("categories");
+   const categories = useSelector((state) => state.categories);
 
   //handle scrolling
   useEffect(() => {
@@ -25,7 +27,7 @@ function TopCategories() {
         ref={top_categories_slide}
         className="row categories overflow-x-auto   flex  items-center gap-6 py-5 cursor-pointer"
       >
-        {data?.map((category) => (
+        {categories?.map((category) => (
           <div
             className={`category text-center rounded-lg shadow-md `}
             style={{ backgroundColor: category.bg_color }}

@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //icons
-import { BsTelephone } from "react-icons/bs";
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiMenuAlt1 } from "react-icons/hi";
@@ -11,22 +10,26 @@ import { FcShop } from "react-icons/fc";
 import Search from "./Search";
 import MobileNav from "./MobileNav";
 import Select from "./Select";
+import TopNav from "./TopNav";
 //redux fetch data from store
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import * as Actions from "../../redux/reducers";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
 //css
 import "../../css/Layouts/Header.css";
 import { Link } from "react-router-dom";
 function Header() {
+  //get categories
+  const { data, loading, error } = UseFetch(
+    "/categories",
+    Actions.addCategories
+  );
   //get cart length to disply in budget
   const cartLenght = useSelector((state) => state.cart?.length);
   const [mobileNavState, setMobileNavState] = useState(false);
-  const [categories, setCategories] = useState([
-    { id: 0, category: "Travel" },
-    { id: 1, category: "Art" },
-    { id: 2, category: "Shoes" },
-    { id: 3, category: "Books" },
-  ]);
-  const [pages, setPages] = useState([
+  // const dispatch = useDispatch();
+  const [pages] = useState([
     { id: 0, page: "Home", path: "/" },
     { id: 1, page: "Products", path: "/products" },
     { id: 2, page: "Contact", path: "/contact" },
@@ -38,36 +41,7 @@ function Header() {
   return (
     <header className="w-full shadow-md ">
       {/* first nav contain site info*/}
-      <nav className="info_nav">
-        <div className="content container mx-auto px-4 flex justify-between py-2 w-full  text-white">
-          <div className="phone_number flex gap-2 justify-center items-center">
-            <BsTelephone />
-            <p>+873980983</p>
-          </div>
-          <p className="ads hidden md:block">
-            Get 50% off on Selected Items | <a href="#">Shop Now</a>
-          </p>
-          <div className="site_info flex gap-4">
-            <select
-              className="language block w-full   py-1   rounded leading-tight"
-              id="grid-state"
-            >
-              <option value="English">English</option>
-              <option value="Arabic">Arabic</option>
-              <option value="Arabic">French</option>
-            </select>
-
-            <select
-              className="location block w-full   py-1 px-1  rounded leading-tight"
-              id="grid-state"
-            >
-              <option value="eg">EG</option>
-              <option value="usa">USA</option>
-              <option value="usa">UAE</option>
-            </select>
-          </div>
-        </div>
-      </nav>
+      <TopNav />
       {/* second nav */}
       <nav className="second_nav  links_nav container mx-auto px-4 flex justify-between items-center py-4 bg-white  ">
         {/* menu btn  */}
@@ -86,7 +60,7 @@ function Header() {
         </a>
         <ul className="hidden links lg:flex justify-center items-center gap-4 z-10">
           <li>
-            <Select list={categories} title={"Categories"} />
+            <Select list={data} title={"Categories"} />
           </li>
           {pages.map((page) => (
             <li className="links" key={page.id}>
