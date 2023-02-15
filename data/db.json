@@ -60,6 +60,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -72,6 +73,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -84,6 +86,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -107,6 +110,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -119,6 +123,7 @@
       "evaluated": "30",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -131,6 +136,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -143,6 +149,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -155,6 +162,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -167,6 +175,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": ["yellow"]
     },
     {
@@ -179,19 +188,21 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": ["green"]
     },
     {
       "id": 11,
       "name": "name",
       "img": "products/travel.png",
-      "price": "70",
+      "price": "10",
       "quantity": 1,
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
-      "avilableColors": []
+      "avilableSizes":["md"],
+      "avilableColors": ["black"]
     },
     {
       "id": 12,
@@ -203,6 +214,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -215,6 +227,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -227,7 +240,8 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
-      "avilableColors": []
+      "avilableSizes":["md"],
+      "avilableColors": ["yellow"]
     },
     {
       "id": 15,
@@ -239,6 +253,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -251,6 +266,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["sm"],
       "avilableColors": []
     },
     {
@@ -263,6 +279,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["sm"],
       "avilableColors": []
     },
     {
@@ -275,6 +292,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["sm"],
       "avilableColors": []
     },
     {
@@ -287,6 +305,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["sm"],
       "avilableColors": []
     },
     {
@@ -299,6 +318,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["sm"],
       "avilableColors": []
     },
     {
@@ -311,6 +331,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "headPhone",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -323,6 +344,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -335,6 +357,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -347,6 +370,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -359,6 +383,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Furniture",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -371,6 +396,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -383,6 +409,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "HeadPhone",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -395,6 +422,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -407,6 +435,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     },
     {
@@ -419,6 +448,7 @@
       "evaluated": "20",
       "total_evaluation": "120",
       "category": "Tech",
+      "avilableSizes":["md"],
       "avilableColors": []
     }
   ],
