@@ -6,6 +6,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import "../../css/Layouts/Select.css";
 //animation
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 function Select({ list, title }) {
   // const [selectState, setselectState] = useState(false);
   //handle custom select
@@ -26,19 +27,24 @@ function Select({ list, title }) {
             key={i}
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", duration: 100, stiffness: 100 }}
-            className="option pl-2  flex  gap-2 px-3  py-2 rounded-md"
+            className=""
           >
-            <div
-              className={`image_bg w-10 h-10 relative rounded-xl`}
-              style={{ backgroundColor: l?.bg_color }}
+            <a
+              href={`/products?${l?.category}`}
+              className="option pl-2  flex  gap-2 px-3  py-2 rounded-md"
             >
-              <img
-                src={`${l?.img}`}
-                alt=""
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <h3> {l.category}</h3>
+              <div
+                className={`image_bg w-10 h-10 relative rounded-xl`}
+                style={{ backgroundColor: l?.bg_color }}
+              >
+                <img
+                  src={`${l?.img}`}
+                  alt=""
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3> {l.category}</h3>
+            </a>
           </motion.li>
         ))}
       </ul>

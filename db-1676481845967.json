@@ -1,0 +1,622 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "category": "Furniture",
+      "img": "categories/category-furniture.png",
+      "bg_color": "#709D83"
+    },
+    {
+      "id": 1,
+      "category": "HandBag",
+      "img": "categories/category-hand-bag.png",
+      "bg_color": "#FDB857"
+    },
+    {
+      "id": 2,
+      "category": "Books",
+      "img": "categories/category-books.png",
+      "bg_color": "#931D1E"
+    },
+    {
+      "id": 3,
+      "category": "Tech",
+      "img": "categories/category-tech.png",
+      "bg_color": "#3BAD71"
+    },
+    {
+      "id": 4,
+      "category": "Sneakers",
+      "img": "categories/category-sneakers.png",
+      "bg_color": "#FEEB49"
+    },
+    {
+      "id": 5,
+      "category": "Travel",
+      "img": "categories/category-travel.png",
+      "bg_color": "#F6B1B6"
+    },
+    {
+      "id": 6,
+      "category": "Art",
+      "img": "categories/category-art.png",
+      "bg_color": "#28a028"
+    },
+    {
+      "id": 7,
+      "category": "HeadPhone",
+      "img": "categories/category-hand-bag.png",
+      "bg_color": "#FDB857"
+    }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "90",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [],
+      "offer": "20%"
+    },
+    {
+      "id": 1,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "80",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [],
+      "offer": "10%"
+    },
+    {
+      "id": 2,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "20",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 3,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "40",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech"
+    },
+    {
+      "id": 4,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "50",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 5,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "40",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "30",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 6,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 7,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 8,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 9,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [
+        "yellow"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [
+        "green"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "10",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [
+        "black"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 13,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 14,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": [
+        "yellow"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 16,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "sm"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 17,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "sm"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 18,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "sm"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 19,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "sm"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 20,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "sm"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 21,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "headPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 22,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 23,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 24,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 25,
+      "name": "name",
+      "img": "products/travel.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Furniture",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 26,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 27,
+      "name": "head Phone",
+      "img": "products/headPhone.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "HeadPhone",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 28,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 29,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    },
+    {
+      "id": 30,
+      "name": "name",
+      "img": "products/tv.png",
+      "price": "70",
+      "quantity": 1,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
+      "evaluated": "20",
+      "total_evaluation": "120",
+      "category": "Tech",
+      "avilableSizes": [
+        "md"
+      ],
+      "avilableColors": []
+    }
+  ],
+  "brands": [
+    {
+      "id": 0,
+      "brand_name": "Apple",
+      "brand_img": "brands/brand-apple.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 1,
+      "brand_name": "Dell",
+      "brand_img": "brands/brand-dell.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 2,
+      "brand_name": "Samsung",
+      "brand_img": "brands/brand-samsung.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 3,
+      "brand_name": "LG",
+      "brand_img": "brands/brand-lg.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 4,
+      "brand_name": "Canon",
+      "brand_img": "brands/brand-canon.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 5,
+      "brand_name": "Bose",
+      "brand_img": "brands/brand-bose.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 6,
+      "brand_name": "SanDisk",
+      "brand_img": "brands/brand-sandisk.png",
+      "details": "delivery with in 24 Houres"
+    },
+    {
+      "id": 7,
+      "brand_name": "Intel",
+      "brand_img": "brands/brand-intel.png",
+      "details": "delivery with in 24 Houres"
+    }
+  ],
+  "offers": [
+    {
+      "id": 0,
+      "offer": "100",
+      "offer_img": "offers/furniture.webp",
+      "offer_details": "Explore Our Furniture...",
+      "bg_color": "#F6F2D4",
+      "offer_color": "#EDCC6F",
+      "url": ""
+    },
+    {
+      "id": 1,
+      "offer": "29",
+      "offer_img": "offers/paint.jpg",
+      "offer_details": "Enjoy Discount All Types Of paints.",
+      "bg_color": "#FADCDD",
+      "offer_color": "#891E14",
+      "url": ""
+    },
+    {
+      "id": 2,
+      "offer": "67",
+      "offer_img": "offers/dresses.jpg",
+      "offer_details": "Explore our Type Of Dresses...",
+      "bg_color": "#F2E4D8",
+      "offer_color": "#DDC6B8",
+      "url": ""
+    },
+    {
+      "id": 3,
+      "offer": "59",
+      "offer_img": "offers/educational.jpg",
+      "offer_details": "Enjoy Discount All Types Of Educational.",
+      "bg_color": "#D3F7ED",
+      "offer_color": "#3F8778",
+      "url": ""
+    },
+    {
+      "id": 4,
+      "offer": "67",
+      "offer_img": "offers/dresses.jpg",
+      "offer_details": "Explore our Type Of Dresses...",
+      "bg_color": "#F2E4D8",
+      "offer_color": "#DDC6B8",
+      "url": ""
+    }
+  ]
+}

@@ -35,7 +35,7 @@ function TopCategories() {
           >
             <div className={` relative content `}>
               <h2 className="title text-white font-bold py-2 ">
-                {category.title}
+                {category.category}
               </h2>
               <img
                 src={`${category.img}`}

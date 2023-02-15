@@ -14,7 +14,7 @@ function ProductsComponent({ filterdProducts, loading }) {
   const [pageNumber, setPageNumber] = useState(0);
   const productsPerPages = 10;
   const productsVisited = pageNumber * productsPerPages;
-  let pageCount = Math.ceil(filterdProducts?.length / productsPerPages);
+  const pageCount = Math.ceil(filterdProducts?.length / productsPerPages);
   //get current products even its filterd or all products and get current products
   var currentProducts = filterdProducts?.slice(
     productsVisited,
