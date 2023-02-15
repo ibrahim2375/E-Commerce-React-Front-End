@@ -11,10 +11,13 @@ const initialState = {
     favorite: [],
 
 }
-export const counterSlice = createSlice({
+export const ProductsSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
+        Products: (state, action) => {
+            state.products = action.payload
+        },
         addCategories: (state, action) => {
             state.categories = action.payload;
         },
@@ -36,6 +39,6 @@ export const counterSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { addCategories,updateCart, removeItemFromCart, addToCart } = counterSlice.actions
+export const { Products, addCategories, updateCart, removeItemFromCart, addToCart } = ProductsSlice.actions
 
-export default counterSlice.reducer
+export default ProductsSlice.reducer

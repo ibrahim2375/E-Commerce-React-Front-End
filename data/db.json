@@ -59,7 +59,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 1,
@@ -70,7 +71,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 2,
@@ -81,7 +83,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 3,
@@ -103,7 +106,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 5,
@@ -114,7 +118,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "30",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 6,
@@ -125,7 +130,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 7,
@@ -136,7 +142,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 8,
@@ -147,7 +154,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 9,
@@ -158,7 +166,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": ["yellow"]
     },
     {
       "id": 10,
@@ -169,7 +178,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": ["green"]
     },
     {
       "id": 11,
@@ -180,7 +190,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 12,
@@ -191,7 +202,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 13,
@@ -202,7 +214,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 14,
@@ -213,7 +226,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 15,
@@ -224,7 +238,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 16,
@@ -235,7 +250,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 17,
@@ -246,7 +262,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 18,
@@ -257,7 +274,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 19,
@@ -268,7 +286,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 20,
@@ -279,7 +298,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 21,
@@ -290,7 +310,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "headPhone"
+      "category": "headPhone",
+      "avilableColors": []
     },
     {
       "id": 22,
@@ -301,7 +322,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 23,
@@ -312,7 +334,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 24,
@@ -323,7 +346,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 25,
@@ -334,7 +358,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Furniture"
+      "category": "Furniture",
+      "avilableColors": []
     },
     {
       "id": 26,
@@ -345,7 +370,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 27,
@@ -356,7 +382,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "HeadPhone"
+      "category": "HeadPhone",
+      "avilableColors": []
     },
     {
       "id": 28,
@@ -367,7 +394,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 29,
@@ -378,7 +406,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     },
     {
       "id": 30,
@@ -389,7 +418,8 @@
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.",
       "evaluated": "20",
       "total_evaluation": "120",
-      "category": "Tech"
+      "category": "Tech",
+      "avilableColors": []
     }
   ],
   "brands": [
