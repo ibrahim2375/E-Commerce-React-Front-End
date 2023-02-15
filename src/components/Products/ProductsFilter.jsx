@@ -43,7 +43,7 @@ function ProductsFilter({ onChange }) {
         onChange={onChange}
       />
       <FilterSelect
-        title="Sort By"
+        title="SortBy"
         options={Filters.SortBy}
         onChange={onChange}
       />

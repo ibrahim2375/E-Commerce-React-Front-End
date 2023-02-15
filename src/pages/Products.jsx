@@ -17,7 +17,6 @@ function Products() {
   //get fillters values
   const FilterValuesOnChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
-    console.log(filters);
   };
   //filter products
   useEffect(() => {
@@ -31,7 +30,7 @@ function Products() {
             product?.category === filters?.Type
         )
       );
-  }, [data,filters]);
+  }, [data, filters]);
   return (
     <div className="products container mx-auto px-4">
       <Advertisement />

@@ -7,6 +7,7 @@ import Product from "../Layouts/Product";
 import ReactPaginate from "react-paginate";
 //css
 import "../../css/Products/ProductsComponent.css";
+
 function ProductsComponent({ products, filterdProducts, loading }) {
   // const products = useSelector((state) => state.products);
   // handle paginations variable
@@ -24,6 +25,7 @@ function ProductsComponent({ products, filterdProducts, loading }) {
   const handlePageClick = ({ selected }) => {
     setPageNumber(selected);
   };
+
   return (
     <div className="prosucts my-10">
       <div className="products_content flex flex-wrap gap-5 items-center justify-center">
