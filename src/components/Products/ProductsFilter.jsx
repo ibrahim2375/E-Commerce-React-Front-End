@@ -30,7 +30,7 @@ function ProductsFilter({ onChange }) {
     >
       {/* color */}
       <FilterSelect title="Type" options={categories} onChange={onChange} />
-      <FilterSelect title="Price" options={Filters.price} onChange={onChange} />
+      {/* <FilterSelect title="Price" options={Filters.price} onChange={onChange} /> */}
       <FilterSelect
         title="Color"
         options={Filters.colors}
