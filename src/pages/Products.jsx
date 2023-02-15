@@ -30,7 +30,8 @@ function Products() {
               (product) =>
                 product?.avilableSizes?.includes(filters?.Size) ||
                 product?.avilableColors?.includes(filters?.Color) ||
-                product?.category === filters?.Type
+                product?.category === filters?.Type ||
+                product?.offer === filters?.Offer
             )
             .sort((a, b) =>
               filters?.SortBy === "asc"
