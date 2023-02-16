@@ -29,7 +29,9 @@ function OffersRow() {
         {/* offer box */}
         {/* when there is no data  on loading*/}
         {loading &&
-          Array.from({ length: 10 }).map((_, i) => <OfferRowSkeleton />)}
+          Array.from({ length: 10 }).map((_, i) => (
+            <OfferRowSkeleton key={i} />
+          ))}
         {data?.map((offer) => (
           <div
             key={offer?.id}
