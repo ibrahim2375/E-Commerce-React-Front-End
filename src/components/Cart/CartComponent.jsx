@@ -3,6 +3,7 @@
 import { MdOutlineDeleteOutline } from "react-icons/md";
 //redux
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import * as Actions from "../../redux/reducers";
 function CartComponent({ cart }) {
   const cart_data = useSelector((state) => state.cart);
@@ -37,13 +38,16 @@ function CartComponent({ cart }) {
             {/* item informtion */}
             <div className="item_info flex gap-5 lg:gap-10">
               {/* image */}
-              <div className="image w-24 sm:h-24 relative bg-gray-300 rounded-lg">
+              <Link
+                to={`/product/${data?.id}`}
+                className="image w-24 sm:h-24 relative bg-gray-300 rounded-lg"
+              >
                 <img
                   src={`${data?.img}`}
                   alt="product_img"
                   className="object-contain w-full h-full"
                 />
-              </div>
+              </Link>
               {/* info */}
               <div className="product_info flex flex-col gap-2">
                 <h3>{data?.name}</h3>

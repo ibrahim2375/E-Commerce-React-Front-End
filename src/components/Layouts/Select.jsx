@@ -38,8 +38,8 @@ function Select({ list, title }) {
                 style={{ backgroundColor: l?.bg_color }}
               >
                 <img
-                  src={`${l?.img}`}
-                  alt=""
+                  src={`/${l?.img}`}
+                  alt="img"
                   className="w-full h-full object-contain"
                 />
               </div>

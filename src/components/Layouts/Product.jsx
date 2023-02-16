@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 //icons
 import { AiOutlineHeart } from "react-icons/ai";
-import { AiTwotoneHeart } from "react-icons/ai";
+// import { AiTwotoneHeart } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
 //functions
@@ -9,10 +9,10 @@ import { truncate } from "../../functions/Truncate";
 //redux
 import { useDispatch, useSelector } from "react-redux";
 import * as Actions from "../../redux/reducers";
-//skeleton
-import Skeleton from "../../skeleton/Skeleton";
+
 //css
 import "../../css/Layouts/Product.css";
+import { Link } from "react-router-dom";
 function Product({ id, img, name, price, quantity }) {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -23,14 +23,17 @@ function Product({ id, img, name, price, quantity }) {
   };
   return (
     <div className="product">
-      <div className="product_image relative  rounded-md mb-2 grid place-content-center">
+      <Link
+        to={`/product/${id}`}
+        className="product_image relative  rounded-md mb-2 grid place-content-center"
+      >
         {/* faviorite icon */}
         <div className="favorite_icon p-2 w-8 h-8 rounded-full bg-white grid place-content-center absolute top-2 right-2">
           <AiOutlineHeart className="text-xl text-slate-400" />
         </div>
         {/* img */}
         <img src={`${img}`} alt="product_img" className="object-contain" />
-      </div>
+      </Link>
       {/* product info */}
       <div className="product_info ">
         <div className="head flex items-center justify-between mt-2">
@@ -44,9 +47,13 @@ function Product({ id, img, name, price, quantity }) {
           )}
         </p>
         <div className="stars flex items-center gap-0 ">
-          {Array.from({ length: 5 }).map((star, i) => (
-            <AiFillStar key={i} className="text-lg filled_star" />
-          ))}
+          {Array.from({ length: 5 }).map((star, i) =>
+            i < 4 ? (
+              <AiFillStar key={i} className="text-lg filled_star" />
+            ) : (
+              <AiOutlineStar key={i} className="text-lg filled_star" />
+            )
+          )}
           <p>(121)</p>
         </div>
         <button

@@ -1,7 +1,7 @@
 //router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //animation
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 //import Lyout general design
 import Layout from "./components/Layouts/Layout";
 import Home from "./pages/Home";
@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
+import SingleProduct from "./pages/SingleProduct";
 function App() {
   return (
     <div className="app">
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="products" element={<Products />} />
+              <Route path="product/:id" element={<SingleProduct />} />
               <Route path="login" element={<Login />} />
               <Route path="register" element={<Register />} />
               <Route path="cart" element={<Cart />} />

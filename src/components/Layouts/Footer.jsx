@@ -29,7 +29,7 @@ function Footer() {
             )}
           </p>
           <h1>Accepted Payments</h1>
-          <img src="paymentMethod.png" alt="payment method img" className="w-40 object-contain" />
+          <img src="/paymentMethod.png" alt="payment method img" className="w-40 object-contain" />
         </div>
         {/* footer links data */}
         <div className="about_us">
