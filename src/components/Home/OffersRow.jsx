@@ -3,6 +3,8 @@ import React, { useEffect, useRef } from "react";
 import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
+//skeleton
+import OfferRowSkeleton from "../../skeleton/OfferRowSkeleton";
 //css
 import "../../css/Home/OffersRow.css";
 //variables
@@ -25,6 +27,9 @@ function OffersRow() {
         className="row content flex items-center gap-5 overflow-x-auto py-4 px-10"
       >
         {/* offer box */}
+        {/* when there is no data  on loading*/}
+        {loading &&
+          Array.from({ length: 10 }).map((_, i) => <OfferRowSkeleton />)}
         {data?.map((offer) => (
           <div
             key={offer?.id}

@@ -7,12 +7,13 @@ import Product from "../Layouts/Product";
 import ReactPaginate from "react-paginate";
 //css
 import "../../css/Products/ProductsComponent.css";
-
+//skeleton
+import ProductSkeleton from "../../skeleton/ProductSkeleton";
 function ProductsComponent({ filterdProducts, loading }) {
   // const products = useSelector((state) => state.products);
   // handle paginations variable
   const [pageNumber, setPageNumber] = useState(0);
-  const productsPerPages = 10;
+  const productsPerPages = 20;
   const productsVisited = pageNumber * productsPerPages;
   const pageCount = Math.ceil(filterdProducts?.length / productsPerPages);
   //get current products even its filterd or all products and get current products
@@ -30,19 +31,8 @@ function ProductsComponent({ filterdProducts, loading }) {
     <div className="prosucts my-10">
       <div className="products_content flex flex-wrap gap-5 items-center justify-center">
         {/* when there is loading */}
-        {loading ? (
-          <h1 className="w-16 h-16 rounded-full border-1 border-l-4  border-solid border-l-gray-400 border-gray-200 animate-spin"></h1>
-        ) : currentProducts?.length === 0 ? (
-          // when there is no results
-          <div className="flex gap-5 items-center">
-            <img
-              src="emptyData.svg"
-              alt="img data"
-              className="object-contain"
-            />
-            <h1 className="text-xl">No Data Founded</h1>
-          </div>
-        ) : (
+        {loading && <ProductSkeleton count={10} />}
+        {
           // when data exist
           currentProducts?.map((product) => (
             <Product
@@ -54,6 +44,17 @@ function ProductsComponent({ filterdProducts, loading }) {
               quantity={product?.quantity}
             />
           ))
+        }
+        {currentProducts?.length === 0 && (
+          // when there is no results
+          <div className="flex gap-5 items-center">
+            <img
+              src="emptyData.svg"
+              alt="img data"
+              className="object-contain"
+            />
+            <h1 className="text-xl">No Data Founded</h1>
+          </div>
         )}
       </div>
       {/* pagination links  */}

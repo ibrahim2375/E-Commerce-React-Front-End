@@ -1,10 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 //hook
 import UseFetch from "../../Hooks/UseFetch";
 //functions
 import { ScrollByMouse } from "../../functions/ScrollByMouse";
 //components
 import Product from "../Layouts/Product";
+//skeleton
+import ProductSkeleton from "../../skeleton/ProductSkeleton";
 //variables
 let scrollLeft = 0;
 let startX;
@@ -25,6 +27,7 @@ function ProductsRow({ title, url }) {
         ref={product_row}
         className="row py-4 px-2 content flex items-center gap-5 overflow-x-auto cursor-pointer"
       >
+        {loading && <ProductSkeleton count={10} />}
         {data?.map((product) => (
           <Product
             key={product?.id}

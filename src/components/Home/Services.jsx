@@ -37,12 +37,13 @@ function Services() {
               <h1 className="text-2xl font-bold">{service?.title}</h1>
               <p className="text-sm mt-4 w-64">{service?.description}</p>
             </div>
-            <div className="service_image relative  rounded-b-lg  row-span-2 overflow-hidden">
+            <div className="service_image relative  rounded-b-lg  row-span-2 overflow-hidden ">
               <img
                 src={`${service?.img}`}
                 alt="offer img"
-                className="w-full h-full transition duration-150 delay-75 transform hover:scale-125"
+                className="w-full h-full "
               />
+              <div className="w-full h-full bg-gray-200"></div>
             </div>
           </div>
         ))}

@@ -7,6 +7,8 @@ import UseFetch from "../../Hooks/UseFetch";
 //components
 import Button from "../Layouts/Button";
 import Product from "../Layouts/Product";
+//skeleton
+import ProductSkeleton from "../../skeleton/ProductSkeleton";
 //variables
 let scrollLeft = 0;
 let startX;
@@ -45,6 +47,9 @@ function ProductsSections() {
       </div>
       {/* products */}
       <div className="products flex flex-wrap justify-center  gap-10 py-10 px-5 ">
+        {/* when loading */}
+        {loading && <ProductSkeleton count={10} />}
+        {/* data success */}
         {data?.map((product) => (
           <Product
             key={product?.id}
@@ -56,6 +61,12 @@ function ProductsSections() {
           />
         ))}
       </div>
+      {/* show message when ther is error */}
+      {error && (
+        <h1 className="text-center my-10 text-2xl">
+          There is a problem try again
+        </h1>
+      )}
     </section>
   );
 }

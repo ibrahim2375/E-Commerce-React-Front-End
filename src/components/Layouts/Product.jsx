@@ -9,6 +9,8 @@ import { truncate } from "../../functions/Truncate";
 //redux
 import { useDispatch, useSelector } from "react-redux";
 import * as Actions from "../../redux/reducers";
+//skeleton
+import Skeleton from "../../skeleton/Skeleton";
 //css
 import "../../css/Layouts/Product.css";
 function Product({ id, img, name, price, quantity }) {

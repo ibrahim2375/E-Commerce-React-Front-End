@@ -1,22 +1,21 @@
-import React, { useState, useEffect } from "react";
-//api request
-import axios from "../../api/axios";
+//hook
+import UseFetch from "../../Hooks/UseFetch";
+//skeleton
+import BrandSkeleton from "../../skeleton/BrandSkeleton";
 //css
 import "../../css/Home/Brands.css";
 function Brands() {
-  const [brands, setBrands] = useState([]);
-  useEffect(() => {
-    const getBrands = async () => {
-      await axios.get("/brands").then((response) => setBrands(response.data));
-    };
-    getBrands();
-  });
+  //fetch brands
+  const { data, loading, error } = UseFetch("/brands");
+
   return (
     <div className="brands">
       <h1 className="text-2xl font-extrabold my-8">Choose By Brand.</h1>
       <div className="my-4 content flex flex-wrap items-center justify-center px-2 gap-8">
         {/* brand */}
-        {brands.map((brand) => (
+        {loading &&
+          Array.from({ length: 8 }).map((_, i) => <BrandSkeleton key={i} />)}
+        {data?.map((brand) => (
           <div
             key={brand?.id}
             className="brand rounded-md flex gap-4 items-center justify-between px-5 py-2 shadow-md"

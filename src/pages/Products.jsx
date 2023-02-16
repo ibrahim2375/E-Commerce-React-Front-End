@@ -52,6 +52,8 @@ function Products() {
             )
     );
   }, [data, filters]);
+
+
   return (
     <div className="products container mx-auto px-4">
       <Advertisement />
@@ -59,14 +61,18 @@ function Products() {
         onChange={FilterValuesOnChange}
         isCategoryPage={location.search}
       />
+      {/* show message when ther is error */}
       {error ? (
-        <h1>There is a problem try again</h1>
+        <h1 className="text-center my-10 text-2xl">
+          There is a problem try again
+        </h1>
       ) : (
         <ProductsComponent
           loading={loading}
           filterdProducts={filterdProducts}
         />
       )}
+
     </div>
   );
 }

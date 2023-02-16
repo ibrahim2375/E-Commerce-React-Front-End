@@ -2,7 +2,7 @@ import React from "react";
 //animation
 import { motion } from "framer-motion";
 //banner img
-import BannerImg from "../../assets/banner4.png";
+import BannerImg from "../../assets/banner4.png"; 
 //css
 import "../../css/Home/Banner.css";
 function Banner() {
@@ -53,7 +53,7 @@ function Banner() {
           // }}
           className="right_side origin-center  self-center"
         >
-          <img src={BannerImg} alt="banner" className="banner_img" />
+          <img src={BannerImg} alt="banner" className="banner_img" /> 
         </div>
       </div>
     </div>

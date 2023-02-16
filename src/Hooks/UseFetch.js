@@ -4,12 +4,11 @@ import { useSelector, useDispatch } from "react-redux";
 // import * as Actions from "../redux/reducers";
 const UseFetch = (path, func) => {
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const dispatch = useDispatch();
     useEffect(() => {
         const getData = async () => {
-            setLoading(true);
             await axios.get(path).then((response) => {
                 setData(response.data)
                 if (func) {
