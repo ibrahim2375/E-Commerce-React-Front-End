@@ -52,7 +52,12 @@ function CartComponent({ cart }) {
               <div className="product_info flex flex-col gap-2">
                 <h3>{data?.name}</h3>
                 <p>SM</p>
-                <p className="w-4 h-4 bg-green-400 rounded-full"></p>
+                {data?.color && (
+                  <p
+                    className="w-4 h-4 rounded-full"
+                    style={{ background: data?.color }}
+                  ></p>
+                )}
               </div>
             </div>
 

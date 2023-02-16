@@ -61,7 +61,7 @@
       "total_evaluation": "120",
       "category": "Tech",
       "avilableSizes": ["md"],
-      "avilableColors": [],
+      "avilableColors": ["red", "green", "yellow"],
       "offer": "20%"
     },
     {

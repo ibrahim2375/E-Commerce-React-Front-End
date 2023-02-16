@@ -12,10 +12,13 @@ import "../../css/SingleProduct/ProductInfo.css";
 
 function ProductInfo({ product, loading }) {
   const [quantity, setQuantity] = useState(1);
+  const [choosedColor, setChoosedColor] = useState(null);
   const dispatch = useDispatch();
   //handle add items to cart
   const handleAddToCart = async () => {
-    await dispatch(Actions.addToCart({ ...product, quantity }));
+    await dispatch(
+      Actions.addToCart({ ...product, quantity, color: choosedColor })
+    );
   };
   return (
     <div className="product_Info flex flex-col gap-5">
@@ -42,22 +45,28 @@ function ProductInfo({ product, loading }) {
         {/* divider */}
         <div className="h-1 bg-gray-100 w-full"></div>
       </div>
-      <div className="avilable_colors">
-        <h2 className="text-lg font-bold">Choose a Color</h2>
-        {/* colors */}
-        <div className="flex gap-2 my-10">
-          {Array(4)
-            .fill(0)
-            .map((_, i) => (
+      {/* check if there is colors or not */}
+      {product?.avilableColors?.length !== 0 && (
+        <div className="avilable_colors">
+          <h2 className="text-lg font-bold">Choose a Color</h2>
+          {/* colors */}
+          <div className="flex gap-2 my-10">
+            {product?.avilableColors?.map((color, i) => (
               <div
                 key={i}
-                className="h-8 w-8 bg-green-600 rounded-full cursor-pointer"
+                className="h-8 w-8 rounded-full cursor-pointer"
+                style={{
+                  background: color,
+                  outline: color === choosedColor && "2px solid #999",
+                }}
+                onClick={(e) => setChoosedColor(color)}
               ></div>
             ))}
+          </div>
+          {/* divider */}
+          <div className="h-1 bg-gray-100 w-full"></div>
         </div>
-        {/* divider */}
-        <div className="h-1 bg-gray-100 w-full"></div>
-      </div>
+      )}
       <div className="quantity_and_add_to_cart flex flex-col gap-10">
         {/* quantity */}
         <div className="flex gap-5">
