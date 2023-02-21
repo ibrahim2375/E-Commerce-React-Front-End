@@ -18,8 +18,8 @@ function Products() {
   //get all products
   const { data, loading, error } = UseFetch(
     !location.search
-      ? `products`
-      : `products?category=${location.search?.replace("?", "")}`
+      ? `products/get`
+      : `/products/by-category?category=${location.search?.replace("?", "")}`
   );
   //get fillters values
   const FilterValuesOnChange = (e) => {

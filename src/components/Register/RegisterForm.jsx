@@ -74,7 +74,7 @@ function RegisterForm() {
     console.table(values);
   };
   return (
-    <div className="form grid place-items-center my-10">
+    <div className="form grid place-items-center my-5 sm:my-10">
       <form
         onSubmit={onSubmit}
         className="py-14 px-10 shadow-none sm:shadow-lg rounded-md"

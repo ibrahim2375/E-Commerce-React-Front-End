@@ -19,16 +19,16 @@ function Home() {
       <Banner />
       <div className="container mx-auto px-4">
         <TopCategories />
-        <ProductsRow title={"Todays Best Deals For You."} url="/products" />
+        <ProductsRow title={"Todays Best Deals For You."} url="/products/get" />
         <Brands />
         <OffersRow />
-        <ProductsRow title={"Weekly Popular Products."} url="/products" />
+        <ProductsRow title={"Weekly Popular Products."} url="/products/get" />
       </div>
       <BigOffer />
       <div className="container mx-auto px-4">
         <ProductsSections  />
         <Advertisement />
-        <ProductsRow title={"Most Selling Products."} url="/products" />
+        <ProductsRow title={"Most Selling Products."} url="/products/get" />
         <Services />
       </div>
     </div>

@@ -22,13 +22,14 @@ import { Link } from "react-router-dom";
 function Header() {
   //get categories
   const { data, loading, error } = UseFetch(
-    "/categories",
+    "/categories/get",
     Actions.addCategories
   );
   //get cart length to disply in budget
   const cartLenght = useSelector((state) => state.cart?.length);
   const [mobileNavState, setMobileNavState] = useState(false);
   // const dispatch = useDispatch();
+  //avilable pages
   const [pages] = useState([
     { id: 0, page: "Home", path: "/" },
     { id: 1, page: "Products", path: "/products" },
@@ -91,6 +92,7 @@ function Header() {
       </nav>
       {/* mobile nav side */}
       <MobileNav
+        pages={pages}
         mobileNavState={mobileNavState}
         handleMobileNav={handleMobileNav}
       />

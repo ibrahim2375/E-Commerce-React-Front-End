@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+//api request
+import axios from "../../api/axios";
 import { Link } from "react-router-dom";
 //css
 import "../../css/Login/LoginForm.css";
@@ -35,7 +37,6 @@ function LoginForm() {
   //handle submit form
   const onSubmit = (e) => {
     e.preventDefault();
-    console.table(values);
   };
   return (
     <div className="form grid place-items-center my-20">

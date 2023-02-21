@@ -34,9 +34,9 @@ function OrderSummery() {
       <h1 className="text-xl font-bold my-4">Orders Details</h1>
       <div className="divider h-1 bg-gray-200 w-full"></div>
       <div className="orders ">
-        {orders?.map((order) => (
+        {orders?.map((order,i) => (
           <div
-            key={order?.id}
+            key={i}
             className="order flex justify-between items-center my-2 font-light"
           >
             <p>{order?.name}</p>

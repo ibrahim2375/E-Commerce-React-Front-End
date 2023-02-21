@@ -10,7 +10,7 @@ import ProductInfo from "../components/SingleProduct/ProductInfo";
 
 function SingleProduct() {
   const params = useParams();
-  const { data, loading, error } = UseFetch(`/products/${params?.id}`);
+  const { data, loading, error } = UseFetch(`/product/get/${params?.id}`);
 
   return (
     <div className="single_product flex flex-col lg:flex-row gap-10  py-20 container mx-auto px-4">

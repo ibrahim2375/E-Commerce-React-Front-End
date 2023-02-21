@@ -30,12 +30,12 @@ function ProductsRow({ title, url }) {
         {loading && <ProductSkeleton count={10} />}
         {data?.map((product) => (
           <Product
-            key={product?.id}
-            id={product?.id}
+            key={product?._id}
+            id={product?._id}
             img={product?.img}
             name={product?.name}
             price={product?.price}
-            quantity={product?.quantity}
+            quantity={1}
           />
         ))}
       </div>

@@ -18,7 +18,7 @@ function Product({ id, img, name, price, quantity }) {
   const cart = useSelector((state) => state.cart);
   //handle add items to cart
   const handleAddToCart = async (id, img, name, price, quantity) => {
-    await dispatch(Actions.addToCart({ id, img, name, price, quantity }));
+    await dispatch(Actions.addToCart({ _id: id, img, name, price, quantity }));
     console.log(cart);
   };
   return (
@@ -32,7 +32,11 @@ function Product({ id, img, name, price, quantity }) {
           <AiOutlineHeart className="text-xl text-slate-400" />
         </div>
         {/* img */}
-        <img src={`${img}`} alt="product_img" className="object-contain" />
+        <img
+          src={`${import.meta.env.VITE_IMG_URL}/${img}`}
+          alt="product_img"
+          className="object-contain"
+        />
       </Link>
       {/* product info */}
       <div className="product_info ">

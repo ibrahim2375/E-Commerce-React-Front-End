@@ -36,12 +36,12 @@ function ProductsComponent({ filterdProducts, loading }) {
           // when data exist
           currentProducts?.map((product) => (
             <Product
-              key={product?.id}
-              id={product?.id}
+              key={product?._id}
+              id={product?._id}
               img={product?.img}
               name={product?.name}
               price={product?.price}
-              quantity={product?.quantity}
+              quantity={1}
             />
           ))
         }

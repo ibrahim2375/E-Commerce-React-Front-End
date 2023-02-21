@@ -12,13 +12,8 @@ import "../../css/Layouts/MobileNav.css";
 //icons
 import { CgClose } from "react-icons/cg";
 import { Link } from "react-router-dom";
-function MobileNav({ mobileNavState, handleMobileNav }) {
+function MobileNav({ mobileNavState, handleMobileNav, pages }) {
   const categories = useSelector((state) => state.categories);
-  const [pages, setPages] = useState([
-    { id: 0, page: "Home", path: "/" },
-    { id: 1, page: "Products", path: "/products" },
-    { id: 2, page: "Contact", path: "/contact" },
-  ]);
 
   return (
     <nav

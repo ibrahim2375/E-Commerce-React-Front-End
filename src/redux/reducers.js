@@ -22,17 +22,17 @@ export const ProductsSlice = createSlice({
             state.categories = action.payload;
         },
         addToCart: (state, action) => {
-            const filterCart = state.cart.filter(item => item?.id === action.payload?.id);
+            const filterCart = state.cart.filter(item => item?._id === action.payload?._id);
             if (filterCart.length === 0) {
                 state.cart.push(action.payload);
             }
         },
         removeItemFromCart: (state, action) => {
-            const filteredCart = state.cart.filter(item => item?.id !== action.payload);
+            const filteredCart = state.cart.filter(item => item?._id !== action.payload);
             state.cart = filteredCart;
         },
         updateCart: (state, action) => {
-            const filteredCart = state.cart.map(item => item?.id === action.payload?.id ? { ...item, quantity: action.payload?.quantity } : item);
+            const filteredCart = state.cart.map(item => item?._id === action.payload?._id ? { ...item, quantity: action.payload?.quantity } : item);
             state.cart = filteredCart;
         }
     }

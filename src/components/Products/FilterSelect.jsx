@@ -7,8 +7,8 @@ function FilterSelect({ options, title, onChange }) {
         <option value={title} className="text-gray-400">
           {title}
         </option>
-        {options?.map((op) => (
-          <option key={op.id} value={op.data}>
+        {options?.map((op,i) => (
+          <option key={i} value={op.data}>
             {op.data || op.category}
           </option>
         ))}

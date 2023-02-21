@@ -16,7 +16,11 @@ function ProductImage({ data, loading }) {
       place-content-center bg-gray-200 h-96 ${loading && "animate-pulse"}`}
     >
       {!loading && (
-        <img src={`/${data?.img}`} alt="img" className="w-full h-full" />
+        <img
+          src={`${import.meta.env.VITE_IMG_URL}/${data?.img}`}
+          alt="img"
+          className="w-full h-full"
+        />
       )}
     </div>
   );

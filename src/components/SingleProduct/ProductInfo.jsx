@@ -54,10 +54,10 @@ function ProductInfo({ product, loading }) {
             {product?.avilableColors?.map((color, i) => (
               <div
                 key={i}
-                className="h-8 w-8 rounded-full cursor-pointer"
+                className="h-8 w-8 rounded-full cursor-pointer outline outline-1 outline-gray-500"
                 style={{
                   background: color,
-                  outline: color === choosedColor && "2px solid #999",
+                  outline: color === choosedColor && "3px solid #999",
                 }}
                 onClick={(e) => setChoosedColor(color)}
               ></div>
@@ -78,7 +78,11 @@ function ProductInfo({ product, loading }) {
             className="outline outline-1 outline-gray-300 pl-2 rounded-md bg-gray-200 w-24 h-8"
           />
           <p>
-            Only <span className="text-orange-400">12 items</span> left!
+            Only
+            <span className="text-orange-400">
+              {product?.leftedItems} items
+            </span>
+            left!
           </p>
         </div>
         <button

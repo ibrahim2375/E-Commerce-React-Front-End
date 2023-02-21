@@ -5,22 +5,22 @@ import { MdOutlineDeleteOutline } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Actions from "../../redux/reducers";
-function CartComponent({ cart }) {
-  const cart_data = useSelector((state) => state.cart);
+function CartComponent() {
+  const cart = useSelector((state) => state.cart);
   // const [newQuantity, setNewQuantity] = useState(0);
   const dispatch = useDispatch();
   //handle remove item from cart
-  const removeItem = async (id) => {
-    await dispatch(Actions.removeItemFromCart(id));
+  const removeItem = async (_id) => {
+    await dispatch(Actions.removeItemFromCart(_id));
   };
   //handle new Quantity
-  const handleNewQuantity = async (quantity, id) => {
+  const handleNewQuantity = async (quantity, _id) => {
     if (quantity > 0) {
       // setNewQuantity(quantity);
-      await dispatch(Actions.updateCart({ id, quantity }));
-      console.log(cart_data);
+      await dispatch(Actions.updateCart({ _id, quantity }));
+      console.log(cart);
     } else if (quantity <= 0) {
-      removeItem(id);
+      removeItem(_id);
     }
   };
   return (
@@ -30,20 +30,20 @@ function CartComponent({ cart }) {
       <div className="items flex flex-col justify-center gap-10">
         {/* loop on cart items */}
         {/* item */}
-        {cart?.map((data) => (
+        {cart?.map((data, i) => (
           <div
-            key={data?.id}
+            key={i}
             className="item relative outline outline-1 outline-gray-300 px-3 py-4 rounded-md flex gap-10  justify-between "
           >
             {/* item informtion */}
             <div className="item_info flex gap-5 lg:gap-10">
               {/* image */}
               <Link
-                to={`/product/${data?.id}`}
+                to={`/product/${data?._id}`}
                 className="image w-24 sm:h-24 relative bg-gray-300 rounded-lg"
               >
                 <img
-                  src={`${data?.img}`}
+                  src={`${import.meta.env.VITE_IMG_URL}/${data?.img}`}
                   alt="product_img"
                   className="object-contain w-full h-full"
                 />
@@ -54,7 +54,7 @@ function CartComponent({ cart }) {
                 <p>SM</p>
                 {data?.color && (
                   <p
-                    className="w-4 h-4 rounded-full"
+                    className="w-4 h-4 rounded-full outline outline-1 outline-gray-500"
                     style={{ background: data?.color }}
                   ></p>
                 )}
@@ -68,7 +68,7 @@ function CartComponent({ cart }) {
                 type="number"
                 defaultValue={data?.quantity}
                 onChange={(e) =>
-                  handleNewQuantity(parseInt(e.target.value), data?.id)
+                  handleNewQuantity(parseInt(e.target.value), data?._id)
                 }
                 className="outline outline-1 outline-gray-300 pl-2 rounded-md bg-gray-200 w-10"
               />
@@ -76,7 +76,7 @@ function CartComponent({ cart }) {
             {/* delete icon */}
             <div
               className="delete_icon transform hover:scale-75 cursor-pointer absolute bottom-4 right-4"
-              onClick={() => removeItem(data?.id)}
+              onClick={() => removeItem(data?._id)}
             >
               <MdOutlineDeleteOutline className="text-2xl" />
             </div>

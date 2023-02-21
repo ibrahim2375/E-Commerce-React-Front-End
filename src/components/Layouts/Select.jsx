@@ -38,7 +38,7 @@ function Select({ list, title }) {
                 style={{ backgroundColor: l?.bg_color }}
               >
                 <img
-                  src={`/${l?.img}`}
+                  src={`${import.meta.env.VITE_IMG_URL}/${l?.img}`}
                   alt="img"
                   className="w-full h-full object-contain"
                 />

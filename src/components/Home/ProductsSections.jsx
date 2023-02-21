@@ -19,8 +19,9 @@ function ProductsSections() {
   const categories_ref = useRef();
   //shoud be limited data depnd on category
   const { data, loading, error } = UseFetch(
-    `/products?category=${currentQuery}`
+    `/products/by-category?category=${currentQuery}`
   );
+  let limitedProducts = data?.slice(0, 20);
   //handle select when select btn add his category
   const handleSelect = (value) => {
     setCurrentQuery(value);
@@ -38,7 +39,7 @@ function ProductsSections() {
       >
         {categories?.map((c) => (
           <Button
-            key={c?.id}
+            key={c?._id}
             value={c?.category}
             active={currentQuery === c?.category}
             fanc={handleSelect}
@@ -50,14 +51,14 @@ function ProductsSections() {
         {/* when loading */}
         {loading && <ProductSkeleton count={10} />}
         {/* data success */}
-        {data?.map((product) => (
+        {limitedProducts?.map((product) => (
           <Product
-            key={product?.id}
-            id={product?.id}
+            key={product?._id}
+            id={product?._id}
             img={product?.img}
             name={product?.name}
             price={product?.price}
-            quantity={product?.quantity}
+            quantity={1}
           />
         ))}
       </div>
