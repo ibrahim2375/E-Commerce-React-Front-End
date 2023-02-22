@@ -1,5 +1,12 @@
 //router
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+//redux
+import { useSelector } from "react-redux";
 //animation
 import { AnimatePresence } from "framer-motion";
 //import Lyout general design
@@ -12,6 +19,7 @@ import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import SingleProduct from "./pages/SingleProduct";
 function App() {
+  const user = useSelector((state) => state.user);
   return (
     <div className="app">
       <AnimatePresence>
@@ -21,8 +29,14 @@ function App() {
               <Route index element={<Home />} />
               <Route path="products" element={<Products />} />
               <Route path="product/:id" element={<SingleProduct />} />
-              <Route path="login" element={<Login />} />
-              <Route path="register" element={<Register />} />
+              <Route
+                path="login"
+                element={user ? <Navigate to="/" replace /> : <Login />}
+              />
+              <Route
+                path="register"
+                element={user ? <Navigate to="/" replace /> : <Register />}
+              />
               <Route path="cart" element={<Cart />} />
               {/* <Route path=" forgot-passowrd" element={<Cart />} /> */}
               <Route path="*" element={<NotFound />} />

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 const initialState = {
     user: null,
+    token: null,
     categories: [],
     products: [],
     mostSellingProducts: [],
@@ -15,30 +16,41 @@ export const ProductsSlice = createSlice({
     name: 'auth',
     initialState,
     reducers: {
+        Login: (state, action) => {
+            state.user = action.payload;
+            state.token = action.payload.token;
+        },
+        Logout: (state, action) => {
+            state.user = null;
+            state.token = null;
+        },
         Products: (state, action) => {
             state.products = action.payload
         },
         addCategories: (state, action) => {
             state.categories = action.payload;
         },
+        Cart: (state, action) => {
+            state.cart = action.payload
+        },
         addToCart: (state, action) => {
-            const filterCart = state.cart.filter(item => item?._id === action.payload?._id);
+            const filterCart = state.cart.filter(item => item?.productId === action.payload?.productId);
             if (filterCart.length === 0) {
                 state.cart.push(action.payload);
             }
         },
         removeItemFromCart: (state, action) => {
-            const filteredCart = state.cart.filter(item => item?._id !== action.payload);
+            const filteredCart = state.cart.filter(item => item?.productId !== action.payload);
             state.cart = filteredCart;
         },
         updateCart: (state, action) => {
-            const filteredCart = state.cart.map(item => item?._id === action.payload?._id ? { ...item, quantity: action.payload?.quantity } : item);
+            const filteredCart = state.cart.map(item => item?.productId === action.payload?.productId ? { ...item, quantity: action.payload?.quantity } : item);
             state.cart = filteredCart;
         }
     }
 })
 
 // Action creators are generated for each case reducer function
-export const { Products, addCategories, updateCart, removeItemFromCart, addToCart } = ProductsSlice.actions
+export const { Login, Logout, Products, addCategories, updateCart, removeItemFromCart, addToCart, Cart } = ProductsSlice.actions
 
 export default ProductsSlice.reducer

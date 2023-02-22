@@ -14,7 +14,7 @@ let isDown = false;
 
 function OffersRow() {
   const offers_row = useRef();
-  const { data, loading, error } = UseFetch("/offers");
+  const { data, loading, error } = UseFetch("/offers/get");
   //handle scrolling
   useEffect(() => {
     ScrollByMouse(offers_row, startX, scrollLeft, isDown);
@@ -34,7 +34,7 @@ function OffersRow() {
           ))}
         {data?.map((offer) => (
           <div
-            key={offer?.id}
+            key={offer?._id}
             className="offer  grid grid-rows-2  gap-4 rounded-lg cursor-pointer shadow-md"
             style={{ backgroundColor: offer?.bg_color }}
           >
@@ -50,7 +50,9 @@ function OffersRow() {
             </div>
             <div className="offer_image relative  rounded-b-lg  row-span-2 overflow-hidden">
               <img
-                src={`${offer?.offer_img}`}
+                src={`${import.meta.env.VITE_OFFERS_IMG_URL}/${
+                  offer?.offer_img
+                }`}
                 alt="offer img"
                 className="w-full h-full transition duration-150 delay-75 transform hover:scale-125"
               />

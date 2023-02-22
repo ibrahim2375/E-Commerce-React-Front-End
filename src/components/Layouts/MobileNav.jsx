@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 //redux
-import { useSelector } from "react-redux";
-
+import { useDispatch, useSelector } from "react-redux";
+import * as Actions from "../../redux/reducers";
 //icons
 import { FaUserCircle } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
+import { HiOutlineLogout } from "react-icons/hi";
 //components
 import Select from "./Select";
 //css
@@ -14,7 +15,14 @@ import { CgClose } from "react-icons/cg";
 import { Link } from "react-router-dom";
 function MobileNav({ mobileNavState, handleMobileNav, pages }) {
   const categories = useSelector((state) => state.categories);
-
+  //get current user
+  const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  //handle logOut
+  const logOut = async () => {
+    await dispatch(Actions.Logout());
+    handleMobileNav();
+  };
   return (
     <nav
       className={`mobile_nav_side ${
@@ -26,7 +34,7 @@ function MobileNav({ mobileNavState, handleMobileNav, pages }) {
         {/* user */}
         <div className="user_data py-4 px-2 flex justify-center items-center gap-2 text-white">
           <FaUserCircle />
-          <h1>Hello , User</h1>
+          <h1>Hello , {user ? user.username : "User"}</h1>
           {/* close icon */}
           <CgClose
             className="text-2xl text-white absolute top-4 left-3 hover:cursor-pointer hover:scale-75"
@@ -51,14 +59,24 @@ function MobileNav({ mobileNavState, handleMobileNav, pages }) {
         {/* Help & Settings */}
         <div className="help px-3 pb-4">
           <h1 className="text-md font-bold my-4">Help & Settings</h1>
-          <Link
-            to="/login"
-            className="flex justify-start items-center gap-2"
-            onClick={handleMobileNav}
-          >
-            <AiOutlineUser className="text-xl" />
-            Sign In
-          </Link>
+          {user ? (
+            <div
+              onClick={logOut}
+              className="flex justify-start items-center gap-2 cursor-pointer"
+            >
+              <HiOutlineLogout className="text-2xl" />
+              Logout
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="flex justify-start items-center gap-2"
+              onClick={handleMobileNav}
+            >
+              <AiOutlineUser className="text-xl" />
+              Sign In
+            </Link>
+          )}
         </div>
       </div>
     </nav>

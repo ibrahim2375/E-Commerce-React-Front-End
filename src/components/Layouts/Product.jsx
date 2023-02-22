@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //icons
 import { AiOutlineHeart } from "react-icons/ai";
 // import { AiTwotoneHeart } from "react-icons/ai";
@@ -7,20 +7,21 @@ import { AiOutlineStar } from "react-icons/ai";
 //functions
 import { truncate } from "../../functions/Truncate";
 //redux
-import { useDispatch, useSelector } from "react-redux";
-import * as Actions from "../../redux/reducers";
-
+// import { useDispatch, useSelector } from "react-redux";
+// import * as Actions from "../../redux/reducers";
+//components
+import AddToCartButton from "./AddToCartButton";
 //css
 import "../../css/Layouts/Product.css";
 import { Link } from "react-router-dom";
 function Product({ id, img, name, price, quantity }) {
-  const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cart);
+  // const dispatch = useDispatch();
+  // const cart = useSelector((state) => state.cart);
   //handle add items to cart
-  const handleAddToCart = async (id, img, name, price, quantity) => {
-    await dispatch(Actions.addToCart({ _id: id, img, name, price, quantity }));
-    console.log(cart);
-  };
+  // const handleAddToCart = async (id, img, name, price, quantity) => {
+  //   await dispatch(Actions.addToCart({ _id: id, img, name, price, quantity }));
+  //   console.log(cart);
+  // };
   return (
     <div className="product">
       <Link
@@ -60,12 +61,19 @@ function Product({ id, img, name, price, quantity }) {
           )}
           <p>(121)</p>
         </div>
-        <button
+        <AddToCartButton
+          id={id}
+          img={img}
+          name={name}
+          price={price}
+          quantity={quantity}
+        />
+        {/* <button
           onClick={() => handleAddToCart(id, img, name, price, quantity)}
           className="add_to_cart mt-4 text-sm py-2 px-4 outline outline-1 rounded-full outline-green-900"
         >
           Add To Cart
-        </button>
+        </button> */}
       </div>
     </div>
   );

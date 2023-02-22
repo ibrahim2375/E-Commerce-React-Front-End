@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 //icons
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { HiOutlineLogout } from "react-icons/hi";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { FcShop } from "react-icons/fc";
 //animation
@@ -20,15 +21,16 @@ import UseFetch from "../../Hooks/UseFetch";
 import "../../css/Layouts/Header.css";
 import { Link } from "react-router-dom";
 function Header() {
+  const user = useSelector((state) => state.user);
+  //get cart length to disply in budget
+  const cartLenght = useSelector((state) => state.cart?.length);
   //get categories
   const { data, loading, error } = UseFetch(
     "/categories/get",
     Actions.addCategories
   );
-  //get cart length to disply in budget
-  const cartLenght = useSelector((state) => state.cart?.length);
   const [mobileNavState, setMobileNavState] = useState(false);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   //avilable pages
   const [pages] = useState([
     { id: 0, page: "Home", path: "/" },
@@ -38,6 +40,10 @@ function Header() {
   // handle mobile nav status
   const handleMobileNav = () => {
     setMobileNavState(!mobileNavState);
+  };
+  //handle logOut
+  const logOut = async () => {
+    await dispatch(Actions.Logout());
   };
   return (
     <header className="w-full shadow-md ">
@@ -71,24 +77,51 @@ function Header() {
         </ul>
         {/* search input */}
         <Search />
-        {/* login and sugup pages */}
-        <div className="account_data flex justify-center items-center gap-4">
-          <Link
-            to="/login"
-            className="hidden lg:flex justify-center items-center gap-2"
-          >
-            <AiOutlineUser className="text-2xl" />
-            Account
-          </Link>
-          {/* cart icon */}
-          <Link to="/cart" className="flex justify-center items-center gap-2">
-            <div className="cart_icon relative">
-              <p className="budget">{cartLenght}</p>
-              <AiOutlineShoppingCart className="text-2xl" />
+        {/* login and sugup pages check if there is users or not */}
+        {user ? (
+          <div className="account_data flex justify-center items-center gap-4">
+            <Link
+              to="/profile"
+              className="hidden lg:flex justify-center items-center gap-2"
+            >
+              <AiOutlineUser className="text-2xl" />
+              {user?.username}
+            </Link>
+            {/* cart icon */}
+            <Link to="/cart" className="flex justify-center items-center gap-2">
+              <div className="cart_icon relative">
+                <p className="budget">{cartLenght}</p>
+                <AiOutlineShoppingCart className="text-2xl" />
+              </div>
+              {/* Cart */}
+            </Link>
+            {/* logout icon */}
+            <div
+              onClick={logOut}
+              className="hidden lg:flex justify-center items-center gap-2 cursor-pointer"
+            >
+              <HiOutlineLogout className="text-2xl" />
             </div>
-            Cart
-          </Link>
-        </div>
+          </div>
+        ) : (
+          <div className="account_data flex justify-center items-center gap-4">
+            <Link
+              to="/login"
+              className="hidden lg:flex justify-center items-center gap-2"
+            >
+              <AiOutlineUser className="text-2xl" />
+              Account
+            </Link>
+            {/* cart icon */}
+            <Link to="/cart" className="flex justify-center items-center gap-2">
+              <div className="cart_icon relative">
+                <p className="budget">{cartLenght}</p>
+                <AiOutlineShoppingCart className="text-2xl" />
+              </div>
+              Cart
+            </Link>
+          </div>
+        )}
       </nav>
       {/* mobile nav side */}
       <MobileNav

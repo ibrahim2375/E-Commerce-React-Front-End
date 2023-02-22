@@ -1,10 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+//api request
+import axios from "../../api/axios";
+//redux
+import { useDispatch } from "react-redux";
+// import * as Actions from "../../redux/reducers";
+//toast message
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 //css
 import "../../css/Register/RegisterForm.css";
 //components
 import Input from "../Layouts/Input";
 function RegisterForm() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -68,11 +78,36 @@ function RegisterForm() {
   const handleInputChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+  //successfully message
+  //toast message
+  const successMessage = (message) =>
+    toast.success(message, {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   //handle submit form
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    console.table(values);
+    const { confirmPassword, ...data } = values;
+    await axios
+      .post("/user/create", { ...data })
+      .then((res) => {
+        if (res.status === 200 || res.status === 201) {
+          successMessage(res?.data?.message);
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
+        }
+      })
+      .catch((err) => alert(err?.error?.message));
   };
+
   return (
     <div className="form grid place-items-center my-5 sm:my-10">
       <form
@@ -103,6 +138,19 @@ function RegisterForm() {
           </Link>
         </h1>
       </form>
+      {/* //toast container setting */}
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </div>
   );
 }

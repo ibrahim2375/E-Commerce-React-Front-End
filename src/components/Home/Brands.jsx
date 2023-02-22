@@ -6,7 +6,7 @@ import BrandSkeleton from "../../skeleton/BrandSkeleton";
 import "../../css/Home/Brands.css";
 function Brands() {
   //fetch brands
-  const { data, loading, error } = UseFetch("/brands");
+  const { data, loading, error } = UseFetch("/brands/get");
 
   return (
     <div className="brands">
@@ -17,12 +17,14 @@ function Brands() {
           Array.from({ length: 8 }).map((_, i) => <BrandSkeleton key={i} />)}
         {data?.map((brand) => (
           <div
-            key={brand?.id}
+            key={brand?._id}
             className="brand rounded-md flex gap-4 items-center justify-between px-5 py-2 shadow-md"
           >
             <div className="brand_image  w-20 h-20  p-4 rounded-full relative bg-white">
               <img
-                src={`${brand?.brand_img}`}
+                src={`${import.meta.env.VITE_BRANDS_IMG_URL}/${
+                  brand?.brand_img
+                }`}
                 alt="brand img"
                 className="w-full h-full object-cover"
               />

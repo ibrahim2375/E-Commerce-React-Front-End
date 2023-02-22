@@ -4,22 +4,23 @@ import { truncate } from "../../functions/Truncate";
 //icons
 import { AiFillStar } from "react-icons/ai";
 import { AiOutlineStar } from "react-icons/ai";
-//redux
-import * as Actions from "../../redux/reducers";
-import { useDispatch } from "react-redux";
+//components
+import AddToCartButton from "../Layouts/AddToCartButton";
+// import * as Actions from "../../redux/reducers";
+// import { useDispatch } from "react-redux";
 //css
 import "../../css/SingleProduct/ProductInfo.css";
 
 function ProductInfo({ product, loading }) {
   const [quantity, setQuantity] = useState(1);
   const [choosedColor, setChoosedColor] = useState(null);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   //handle add items to cart
-  const handleAddToCart = async () => {
-    await dispatch(
-      Actions.addToCart({ ...product, quantity, color: choosedColor })
-    );
-  };
+  // const handleAddToCart = async () => {
+  //   await dispatch(
+  //     Actions.addToCart({ ...product, quantity, color: choosedColor })
+  //   );
+  // };
   return (
     <div className="product_Info flex flex-col gap-5">
       <div className="main_data flex flex-col gap-4">
@@ -85,12 +86,20 @@ function ProductInfo({ product, loading }) {
             left!
           </p>
         </div>
-        <button
+        <AddToCartButton
+          id={product?._id}
+          img={product?.img}
+          name={product?.name}
+          price={product?.price}
+          quantity={quantity}
+          color={choosedColor}
+        />
+        {/* <button
           onClick={handleAddToCart}
           className="add_to_cart_single_btn py-2 px-3 rounded-full"
         >
           Add To Cart
-        </button>
+        </button> */}
       </div>
     </div>
   );
