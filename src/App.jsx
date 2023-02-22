@@ -18,6 +18,7 @@ import Register from "./pages/Register";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import SingleProduct from "./pages/SingleProduct";
+import Contact from "./pages/Contact";
 function App() {
   const user = useSelector((state) => state.user);
   return (
@@ -38,6 +39,7 @@ function App() {
                 element={user ? <Navigate to="/" replace /> : <Register />}
               />
               <Route path="cart" element={<Cart />} />
+              <Route path="contact" element={<Contact />} />
               {/* <Route path=" forgot-passowrd" element={<Cart />} /> */}
               <Route path="*" element={<NotFound />} />
             </Route>

@@ -56,6 +56,9 @@ body {
 .row::-webkit-scrollbar {
   display: none;
 }
+.input_bg {
+  background-color: var(--input-bg);
+}
 /* .links:hover {
   background-color: var(--primary-color);
 } */
