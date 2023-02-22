@@ -25,7 +25,7 @@ function Results({ filteredProducts }) {
           }
           {filteredProducts?.length === 0 && (
             // when there is no results
-            <div className="flex gap-5 items-center justify-center w-full">
+            <div className="flex gap-5 items-center justify-center w-full h-96">
               <img
                 src="emptyData.svg"
                 alt="img data"

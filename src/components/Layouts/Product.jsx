@@ -22,7 +22,7 @@ function Product({ id, img, name, price, quantity, searchPage }) {
     >
       <Link
         to={`/product/${id}`}
-        className="product_image relative  rounded-md  grid place-content-center"
+        className={`product_image relative  rounded-md  grid place-content-center ${searchPage && 'md:w-96'}`}
       >
         {/* faviorite icon */}
         <div className="favorite_icon p-2 w-8 h-8 rounded-full bg-white grid place-content-center absolute top-2 right-2">
@@ -32,7 +32,7 @@ function Product({ id, img, name, price, quantity, searchPage }) {
         <img
           src={`${import.meta.env.VITE_IMG_URL}/${img}`}
           alt="product_img"
-          className="object-contain"
+          className={`object-contain`}
         />
       </Link>
       {/* product info */}
