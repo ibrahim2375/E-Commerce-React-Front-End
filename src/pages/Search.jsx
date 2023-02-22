@@ -10,7 +10,6 @@ import UseFetch from "../Hooks/UseFetch";
 import Results from "../components/Search/Results";
 function Search() {
   const products = useSelector((state) => state.products);
-  const [noResult, setNoResult] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const location = useLocation();
   //handle search
@@ -20,11 +19,10 @@ function Search() {
     //get products by search input from store when search change
     const getFilteredProducts = () => {
       if (location.search === "") {
-        setNoResult(true);
         setFilteredProducts([]);
       } else {
         setFilteredProducts(
-          data?.filter((product) =>
+          products?.filter((product) =>
             product.name
               .toLowerCase()
               .includes(location.search.replace("?", "").toLowerCase())
@@ -34,10 +32,9 @@ function Search() {
     };
     getFilteredProducts();
   }, [location.search]);
-  console.log(filteredProducts);
   return (
     <div className="container mx-auto px-4">
-      <Results filteredProducts={filteredProducts} noResult={noResult} />
+      <Results filteredProducts={filteredProducts} loading={loading} />
     </div>
   );
 }

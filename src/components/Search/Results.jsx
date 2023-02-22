@@ -2,13 +2,17 @@ import React from "react";
 
 //components
 import Product from "../Layouts/Product";
-function Results({ filteredProducts }) {
+function Results({ filteredProducts, loading }) {
   return (
     <div className="products_result my-10">
       {/* products result */}
       <div className="flex flex-col gap-5">
         {/* single product */}
         <div className="flex flex-col gap-4 items-center justify-center md:justify-start md:items-start ">
+          {/* when there is loading */}
+          {loading && (
+            <div className="loading outline-1 outline-l-4 animate-spin outline-gray-200 w-8 h-8 rounded-full"></div>
+          )}
           {
             // when data exist
             filteredProducts?.map((product) => (
