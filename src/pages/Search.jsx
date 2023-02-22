@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 //router
 import { useLocation } from "react-router-dom";
 //redux
+import * as Actions from "../redux/reducers";
 import { useSelector } from "react-redux";
+//hook
+import UseFetch from "../Hooks/UseFetch";
 //components
 import Results from "../components/Search/Results";
 function Search() {
@@ -11,7 +14,8 @@ function Search() {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const location = useLocation();
   //handle search
-
+  //get all products
+  const { data, loading, error } = UseFetch(`/products/get`, Actions.Products);
   useEffect(() => {
     //get products by search input from store when search change
     const getFilteredProducts = () => {
@@ -20,7 +24,7 @@ function Search() {
         setFilteredProducts([]);
       } else {
         setFilteredProducts(
-          products?.filter((product) =>
+          data?.filter((product) =>
             product.name
               .toLowerCase()
               .includes(location.search.replace("?", "").toLowerCase())
@@ -30,7 +34,7 @@ function Search() {
     };
     getFilteredProducts();
   }, [location.search]);
-
+  console.log(filteredProducts);
   return (
     <div className="container mx-auto px-4">
       <Results filteredProducts={filteredProducts} noResult={noResult} />

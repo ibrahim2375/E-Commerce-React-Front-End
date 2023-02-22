@@ -1,5 +1,4 @@
 import React from "react";
-
 //components
 import Banner from "../components/Home/Banner";
 import TopCategories from "../components/Home/TopCategories";
@@ -11,8 +10,6 @@ import ProductsSections from "../components/Home/ProductsSections";
 import Advertisement from "../components/Layouts/Advertisement";
 import Services from "../components/Home/Services";
 
-//hook
-import UseFetch from "../Hooks/UseFetch";
 function Home() {
   return (
     <div>
