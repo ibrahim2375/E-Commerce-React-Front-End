@@ -32,7 +32,6 @@ function CartComponent() {
     if (quantity > 0) {
       // setNewQuantity(quantity);
       await dispatch(Actions.updateCart({ productId, quantity }));
-      console.log(cart);
     } else if (quantity <= 0) {
       removeItem(productId);
     }
