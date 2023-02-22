@@ -7,26 +7,22 @@ import { AiOutlineStar } from "react-icons/ai";
 //functions
 import { truncate } from "../../functions/Truncate";
 //redux
-// import { useDispatch, useSelector } from "react-redux";
-// import * as Actions from "../../redux/reducers";
 //components
 import AddToCartButton from "./AddToCartButton";
 //css
 import "../../css/Layouts/Product.css";
 import { Link } from "react-router-dom";
-function Product({ id, img, name, price, quantity }) {
-  // const dispatch = useDispatch();
-  // const cart = useSelector((state) => state.cart);
-  //handle add items to cart
-  // const handleAddToCart = async (id, img, name, price, quantity) => {
-  //   await dispatch(Actions.addToCart({ _id: id, img, name, price, quantity }));
-  //   console.log(cart);
-  // };
+function Product({ id, img, name, price, quantity, searchPage }) {
   return (
-    <div className="product">
+    <div
+      className={`${
+        searchPage &&
+        "block md:flex gap-10 md:shadow-md pr-5 md:w-full rounded-lg "
+      }`}
+    >
       <Link
         to={`/product/${id}`}
-        className="product_image relative  rounded-md mb-2 grid place-content-center"
+        className="product_image relative  rounded-md  grid place-content-center"
       >
         {/* faviorite icon */}
         <div className="favorite_icon p-2 w-8 h-8 rounded-full bg-white grid place-content-center absolute top-2 right-2">
@@ -40,7 +36,11 @@ function Product({ id, img, name, price, quantity }) {
         />
       </Link>
       {/* product info */}
-      <div className="product_info ">
+      <div
+        className={`product_info relative ${
+          searchPage && "lg:flex lg:flex-col  gap-2  md:w-full"
+        }`}
+      >
         <div className="head flex items-center justify-between mt-2">
           <h2 className="name font-bold text-lg">{name}</h2>
           <h2 className="price font-bold text-lg">{price}$</h2>
@@ -61,22 +61,21 @@ function Product({ id, img, name, price, quantity }) {
           )}
           <p>(121)</p>
         </div>
-        <AddToCartButton
-          id={id}
-          img={img}
-          name={name}
-          price={price}
-          quantity={quantity}
-        />
-        {/* <button
-          onClick={() => handleAddToCart(id, img, name, price, quantity)}
-          className="add_to_cart mt-4 text-sm py-2 px-4 outline outline-1 rounded-full outline-green-900"
-        >
-          Add To Cart
-        </button> */}
+        <div className={`${searchPage && "md:absolute bottom-4 right-2"}`}>
+          <AddToCartButton
+            id={id}
+            img={img}
+            name={name}
+            price={price}
+            quantity={quantity}
+          />
+        </div>
       </div>
     </div>
   );
 }
+Product.prototype = {
+  searchPage: false,
+};
 
 export default Product;

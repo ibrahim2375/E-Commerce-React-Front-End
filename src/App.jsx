@@ -19,6 +19,7 @@ import Cart from "./pages/Cart";
 import NotFound from "./pages/NotFound";
 import SingleProduct from "./pages/SingleProduct";
 import Contact from "./pages/Contact";
+import Search from "./pages/Search";
 function App() {
   const user = useSelector((state) => state.user);
   return (
@@ -40,6 +41,7 @@ function App() {
               />
               <Route path="cart" element={<Cart />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="search" element={<Search />} />
               {/* <Route path=" forgot-passowrd" element={<Cart />} /> */}
               <Route path="*" element={<NotFound />} />
             </Route>
