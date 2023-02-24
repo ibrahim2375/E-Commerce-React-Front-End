@@ -1,15 +1,16 @@
-# E-Commerce Web App
-
-## Front End Web App
-
+# E-Commerce Web App Fron-End
 ## React + Vite
-
-### Home Page
-![app](/public/app.png)
-### Run Project
-
+## Run Project
 ```bach
 npm install
 npm run dev
 npm run build
 ```
+### Home Page
+![home](/public/home.png)
+
+### Home Page
+![cart](/public/cart.png)
+
+### Home Page
+![contact](/public/contact.png)
