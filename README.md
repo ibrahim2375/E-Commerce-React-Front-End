@@ -8,8 +8,8 @@ npm run dev
 ### Home Page
 ![home](/public/home.png)
 
-### Home Page
+### Cart Page
 ![cart](/public/cart.png)
 
-### Home Page
+### Contact Page
 ![contact](/public/contact.png)
