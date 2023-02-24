@@ -4,7 +4,6 @@
 ```bach
 npm install
 npm run dev
-npm run build
 ```
 ### Home Page
 ![home](/public/home.png)
