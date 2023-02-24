@@ -40,14 +40,14 @@ function TopCategories() {
             style={{ backgroundColor: category.bg_color }}
             key={category._id}
           >
-            <div className={` relative content `}>
+            <div className={` relative content grid place-content-center `}>
               <h2 className="title text-white font-bold py-2 ">
                 {category.category}
               </h2>
               <img
                 src={`${import.meta.env.VITE_IMG_URL}/${category.img}`}
                 alt=""
-                className="absolute top-0 bottom-0 left-0 right-0 "
+                className="absolute top-0 "
               />
             </div>
           </div>

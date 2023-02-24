@@ -58,6 +58,8 @@ function ProductsSections() {
             img={product?.img}
             name={product?.name}
             price={product?.price}
+            description={product?.description}
+            views={product?.views}
             quantity={1}
           />
         ))}

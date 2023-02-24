@@ -1,6 +1,7 @@
 .brand {
   cursor: pointer;
   background: var(--brand-bg);
+  min-width: 350px;
 }
 .brand:hover {
   outline: 1px solid var(--primary-color);

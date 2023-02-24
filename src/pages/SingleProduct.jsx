@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+
 //router
 import { useParams } from "react-router-dom";
 //hook
@@ -20,10 +21,7 @@ function SingleProduct() {
       </div>
       {/* product Information */}
       <div className="flex-1">
-        <ProductInfo
-          product={data}
-          loading={loading}
-        />
+        <ProductInfo product={data} loading={loading} />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 //redux
 // import { useSelector } from "react-redux";
 //components
@@ -41,6 +42,8 @@ function ProductsComponent({ filterdProducts, loading }) {
               img={product?.img}
               name={product?.name}
               price={product?.price}
+              description={product?.description}
+              views={product?.views}
               quantity={1}
             />
           ))
