@@ -1,33 +1,38 @@
 import React, { useEffect, useState } from "react";
+//axios request
+import axios from "../api/axios";
 //router
 import { useLocation } from "react-router-dom";
-//redux
-import * as Actions from "../redux/reducers";
-import { useSelector } from "react-redux";
 //hook
-import UseFetch from "../Hooks/UseFetch";
+// import UseFetch from "../Hooks/UseFetch";
 //components
 import Results from "../components/Search/Results";
 function Search() {
-  const products = useSelector((state) => state.products);
+  // const products = useSelector((state) => state.products);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const location = useLocation();
   //handle search
   //get all products
-  const { data, loading, error } = UseFetch(`/products/get`, Actions.Products);
+  // const { data, loading, error } = UseFetch(`/products/get`, Actions.Products);
+  // const { data, loading, error } = UseFetch(
+  //   `/products/search/?search=${location.search.replace("?", "")}`
+  // );
   useEffect(() => {
     //get products by search input from store when search change
-    const getFilteredProducts = () => {
-      if (location.search === "") {
+    const getFilteredProducts = async () => {
+      if (location.search.trim() === "") {
         setFilteredProducts([]);
       } else {
-        setFilteredProducts(
-          products?.filter((product) =>
-            product.name
-              .toLowerCase()
-              .includes(location.search.replace("?", "").toLowerCase())
-          )
-        );
+        await axios
+          .get(`/products/search/?search=${location.search.replace("?", "")}`)
+          .then((res) => {
+            setFilteredProducts(res?.data);
+            setLoading(false);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       }
     };
     getFilteredProducts();

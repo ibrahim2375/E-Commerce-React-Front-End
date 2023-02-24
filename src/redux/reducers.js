@@ -10,6 +10,7 @@ const initialState = {
     offers: [],
     cart: [],
     favorite: [],
+    searchList: ["hi"],
 
 }
 export const ProductsSlice = createSlice({
@@ -46,11 +47,17 @@ export const ProductsSlice = createSlice({
         updateCart: (state, action) => {
             const filteredCart = state.cart.map(item => item?.productId === action.payload?.productId ? { ...item, quantity: action.payload?.quantity } : item);
             state.cart = filteredCart;
-        }
+        },
+        SearchList: (state, action) => {
+            let filteredList = state.searchList?.filter(item => item === action.payload?.searchQuery);
+            if (filteredList?.length === 0) {
+            state.searchList.push(action.payload?.searchQuery);
+            }
+        },
     }
 })
 
 // Action creators are generated for each case reducer function
-export const { Login, Logout, Products, addCategories, updateCart, removeItemFromCart, addToCart, Cart } = ProductsSlice.actions
+export const { Login, Logout, Products, addCategories, updateCart, removeItemFromCart, addToCart, Cart, SearchList } = ProductsSlice.actions
 
 export default ProductsSlice.reducer

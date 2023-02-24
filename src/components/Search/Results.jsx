@@ -1,5 +1,6 @@
 import React from "react";
-
+//skeleton
+import ProductSkeleton from "../../skeleton/ProductSkeleton";
 //components
 import Product from "../Layouts/Product";
 function Results({ filteredProducts, loading }) {
@@ -10,9 +11,7 @@ function Results({ filteredProducts, loading }) {
         {/* single product */}
         <div className="flex flex-col gap-4 items-center justify-center md:justify-start md:items-start ">
           {/* when there is loading */}
-          {loading && (
-            <div className="loading outline-1 outline-l-4 animate-spin outline-gray-200 w-8 h-8 rounded-full"></div>
-          )}
+          {loading && <ProductSkeleton count={10} searchPage={true} />}
           {
             // when data exist
             filteredProducts?.map((product) => (
